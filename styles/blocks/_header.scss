@@ -1,0 +1,223 @@
+@use "../helpers" as *;
+
+.header {
+  padding-top: rem(20);
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    min-width: rem(212);
+  }
+
+  &__location {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(4);
+    font-size: rem(14);
+    font-weight: 600;
+    line-height: rem(19.5);
+    color: var(--color-dark-alt-2);
+  }
+
+  &__contacts {
+    display: flex;
+    column-gap: rem(22);
+    align-items: center;
+  }
+
+  &__tel {
+    font-size: rem(21);
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  &__soc1als {
+    display: flex;
+    column-gap: rem(11);
+    align-items: center;
+
+    @include mobile {
+      padding-inline: 1rem;
+      column-gap: rem(10);
+      justify-content: center;
+      padding-bottom: rem(45);
+    }
+  }
+
+  &__main {
+    display: flex;
+    padding-top: rem(18);
+    column-gap: rem(120);
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      column-gap: rem(20);
+      justify-content: start;
+    }
+  }
+
+  &__content {
+    display: flex;
+    column-gap: rem(30);
+
+    @include mobile {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__catalog {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: rem(9);
+    background-color: var(--color-yellow);
+    border-radius: rem(6);
+    padding: rem(14) rem(24);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: rem(16);
+    transition-duration: var(--transition-duration);
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      transform: rotate(180deg);
+      padding: rem(11) rem(10);
+      width: rem(45);
+      height: rem(45);
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      gap: rem(10) rem(35);
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include tablet {
+        gap: rem(4) rem(8);
+        max-width: rem(300);
+      }
+    }
+    &-link {
+      font-weight: 600;
+      font-size: rem(16);
+      color: var(--color-dark-alt);
+      text-wrap: nowrap;
+
+      @include tablet {
+        font-size: rem(12);
+      }
+    }
+  }
+
+  &__overlay {
+    margin-top: rem(20);
+    border-radius: 0 0 rem(20) rem(20);
+    background-color: var(--color-light);
+    padding: rem(41) rem(38);
+    position: absolute;
+    z-index: 10;
+    max-width: rem(1258);
+    box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.07);
+    min-height: rem(272);
+
+    @include laptop {
+      padding: rem(41) rem(20);
+    }
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(30);
+
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &-rubric {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(24);
+      max-height: rem(190);
+
+      &:last-child {
+        @include tablet {
+          display: grid;
+          grid-area: 2 / 1 / 3 / 4;
+          padding-top: rem(20);
+        }
+      }
+
+      &-cols {
+        display: flex;
+        column-gap: rem(33);
+      }
+
+      &-first-col,
+      &-second-col {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+      }
+
+      &-heading {
+        display: flex;
+        column-gap: rem(10);
+        align-items: center;
+
+        &--alt {
+          padding-top: rem(13);
+
+          @include tablet {
+            padding-top: 0;
+          }
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: rem(22);
+        color: var(--color-dark-alt);
+        transition-duration: var(--transition-duration);
+        line-height: 0.8;
+        &.hovered {
+          color: var(--color-yellow-alt);
+        }
+      }
+
+      &-line {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: rem(1);
+        transition-duration: var(--transition-duration);
+
+        &.hovered {
+          background-color: var(--color-yellow-alt);
+        }
+      }
+
+      &-link {
+        font-weight: 600;
+        font-size: rem(15);
+        color: var(--color-dark-alt);
+        opacity: 0.75;
+        line-height: 0.9;
+        text-wrap: nowrap;
+        @include hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../helpers" as *;
+
+.field {
+    --fieldInputHeight: var(--input-height);
+    --fieldInputTextColor: var(--color-dark-alt);
+    --fieldInputBgColor: #FAFAFA;
+    --fieldInputBorderColor: var(--color-dark-alt);
+    --fieldInputPlaceholderColor: var(--color-gray);
+    --fieldInputHoverBgColor: var(--color-yellow);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: rem(5);
+  
+    @include mobile {
+      row-gap: rem(5);
+    }
+  
+    &__label {
+      @include fluid-text(16, 14);
+    }
+  
+    &__input {
+      width: 100%;
+      height: var(--fieldInputHeight);
+      padding-inline: rem(12);
+      color: var(--fieldInputTextColor);
+      background-color: var(--fieldInputBgColor);
+      border: rem(1) solid var(--fieldInputBorderColor);
+  
+      @include hover {
+        background-color: var(--fieldInputHoverBgColor);
+      }
+  
+      &:focus {
+        border-color: var(--color-accent);
+        outline: none;
+      }
+  
+      &::placeholder {
+        color: var(--fieldInputPlaceholderColor);
+      }
+  
+      &--textarea {
+        height: rem(220);
+        padding-block: rem(16);
+        resize: none;
+      }
+
+      &--select {
+
+      }
+    }
+
+
+  }

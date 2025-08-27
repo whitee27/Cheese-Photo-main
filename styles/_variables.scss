@@ -1,0 +1,46 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: rgba(47, 40, 37);
+  --color-dark-alt: #151515;
+  --color-dark-alt-2: #2d2d2d;
+  --color-yellow-alt: #f9a317;
+  --color-yellow: #feba19;
+
+  --color-gray: rgb(38, 38, 38, 3);
+  --color-gray-alt: rgba(134, 134, 134, 0.22);
+
+  --color-accent: #ed9300;
+
+  --input-height: #{rem(45)};
+
+  --font-family-base: "Montserrat", system-ui;
+
+  --container-width: #{rem(1920)};
+  --container-padding-x: #{rem(50)};
+  --container-padding-x-alt: #{rem(200)};
+  @include laptop {
+    --container-padding-x-alt: #{rem(150)};
+  }
+
+  @include tablet {
+    --container-padding-x-alt: #{rem(100)};
+  }
+
+  @include mobile {
+    --container-padding-x-alt: #{rem(16)};
+    --container-padding-x: #{rem(16)};
+
+  }
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+
+  @include mobile {
+    --container-width: #{rem(450)};
+    --container-padding-x: #{rem(20)};
+  }
+}

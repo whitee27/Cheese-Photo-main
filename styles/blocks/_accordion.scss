@@ -1,0 +1,94 @@
+@use "../helpers" as *;
+
+.accordion {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    column-gap: rem(15);
+    align-items: center;
+    padding: rem(26) 1rem;
+    padding-right: 1.75rem;
+    &-title {
+      font-weight: 700;
+      font-size: rem(18);
+      color: var(--color-dark-alt);
+      transition-duration: var(--transition-duration);
+      line-height: 0.8;
+    }
+
+    &-line {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      height: 0.01rem;
+      transition-duration: var(--transition-duration);
+    }
+
+    &-arrow {
+      transform: scale(200%);
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &__rubric {
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      padding-block: rem(24);
+      margin-inline: rem(19);
+      transition-duration: var(--transition-duration);
+      @include hover {
+        background-color: var(--color-accent);
+        border-radius: rem(6);
+        border: none;
+
+        & .accordion__rubric-link {
+          color: var(--color-light);
+          opacity: 1;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+      }
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 0.8;
+      color: var(--color-dark-alt);
+      opacity: 0.75;
+      padding-left: rem(10);
+    }
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+
+.accordion__rubric[open] {
+  background-color: #fff9ef;
+
+  & .accordion__header-arrow {
+    filter: invert(80%) sepia(20%) saturate(6704%) hue-rotate(348deg)
+      brightness(99%) contrast(96%);
+    transform: rotate(90deg) scale(200%);
+  }
+
+  & .accordion__header-title {
+    color: var(--color-yellow-alt);
+  }
+
+  & .accordion__header-line {
+    background-color: var(--color-yellow-alt);
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../helpers" as *;
+
+.possibilities {
+  display: grid;
+  row-gap: rem(55);
+  padding-top: rem(20);
+
+  @include laptop {
+    padding-top: rem(200);
+  }
+
+  @include mobile {
+    row-gap: rem(35);
+  }
+
+  &__title {
+    font-size: rem(42);
+
+    @include mobile {
+      font-size: rem(28);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(50) rem(20);
+
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(30);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(20);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+  }
+
+  &__icon {
+    -webkit-box-shadow: 0px rem(3) rem(32) 0px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px rem(3) rem(32) 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px rem(3) rem(32) 0px rgba(0, 0, 0, 0.07);
+    border-radius: rem(12);
+    @include mobile {
+      width: rem(74);
+      height:  rem(74);
+    }
+  }
+
+  &__info {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: rem(24);
+    color: var(--color-dark);
+
+    @include mobile {
+      font-size: rem(16);
+      line-height: rem(22);
+    }
+
+    &--additional {
+      font-size: rem(14);
+      color: rgba(33, 37, 41, 0.5);
+    }
+  }
+}

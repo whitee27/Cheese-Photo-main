@@ -1,0 +1,93 @@
+@use "../helpers" as *;
+
+.card {
+  border-radius: rem(15);
+  border:  1px solid #86868637;
+  box-shadow: 0px rem(1) rem(15) 0px rgba(0, 0, 0, 0.04);
+
+  &--wide {
+    min-width: 50%;
+    column-gap: rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include laptop {
+      flex-direction: column;
+      min-width: 30%;
+    }
+
+    @include mobile {
+      width: rem(340);
+      height: rem(312);
+    }
+  }
+
+  &--small {
+    min-height: rem(371);
+
+    @include laptop {
+      min-height: rem(300);
+    }
+
+    @include mobile {
+      width: rem(340);
+      height: rem(312);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(7);
+    padding-right: rem(30);
+
+    @include laptop {
+      padding: rem(20) rem(25);
+    }
+
+    &--small {
+      padding: rem(20) rem(25);
+    }
+  }
+
+  &__title {
+    font-size: rem(20);
+    font-weight: 700;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+  }
+
+  &__description {
+    font-size: rem(16);
+    line-height: 1;
+    @include laptop {
+      font-size: rem(14);
+    }
+  }
+
+  &__image {
+    border-radius: rem(15)  rem(15) 0 0 ;
+    width: 100%;
+    @include mobile {
+      width: rem(340);
+      height: rem(191);
+    }
+
+    &--wide {
+      border-radius: rem(15)  0 0 rem(15);
+      width: 50%;
+
+      @include laptop {
+        width: 100%;
+      }
+
+      @include mobile {
+        width: rem(340);
+        height: rem(191);
+      }
+    }
+  }
+}
