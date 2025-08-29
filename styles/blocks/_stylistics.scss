@@ -22,9 +22,67 @@
   &__list {
     display: flex;
     gap: rem(20);
-
+    justify-content:  space-between;
     @include laptop {
       flex-direction:  column;
+    }
+  }
+
+  &__banner {
+    background: url("../../images/stylistics/bg.jpg") center/cover no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    padding: rem(45);
+    box-shadow: 0 rem(13) rem(24) 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop {
+        flex-direction: column;
+      max-width: rem(665);
+      min-width: rem(665);
+    }
+
+    @include mobile {
+      max-width: 100%;
+      min-width: 100%;
+    }
+    
+    &-text {
+      font-weight: 700;
+      font-size: rem(32);
+      line-height: 120%;
+      color: #212529;
+      max-width: rem(618);
+      &--yellow {
+        color: #fcaf18;
+      }
+
+      @include mobile {
+        font-weight: 700;
+        font-size: rem(23);
+      }
+    }
+
+    &-button {
+      display: inline-flex;
+      font-weight: 600;
+      font-size: rem(15);
+      line-height: 113%;
+      color: #000;
+      column-gap: rem(21);
+      align-items: center;
+      min-width: rem(365);
+      min-height: rem(57);
+      border-radius: rem(6);
+      backdrop-filter: blur(4px);
+
+      @include mobile {
+        width: 100%;
+        min-width: 100%;
+      }
     }
   }
 }

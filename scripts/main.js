@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isMobile()) return; // Не вешаем обработчики на мобильных устройствах
 
     tableFirstCells.forEach(cell => {
-      cell.addEventListener('click', () => {
+      cell.addEventListener('mouseover', () => {
         const size = cell.textContent.trim();
         activateTableCell(cell);
         activateImage(size);
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     tableSecondCells.forEach(cell => {
-      cell.addEventListener('click', () => {
+      cell.addEventListener('mouseover', () => {
         // Для table__second получаем размер из соответствующей ячейки table__first
         const cellClasses = cell.className.split(' ');
         const secondClass = cellClasses.find(cls => cls.startsWith('table__second--'));

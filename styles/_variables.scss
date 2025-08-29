@@ -19,7 +19,7 @@
 
   --container-width: #{rem(1920)};
   --container-padding-x: #{rem(50)};
-  --container-padding-x-alt: #{rem(200)};
+  --container-padding-x-alt: #{rem(300)};
   @include laptop {
     --container-padding-x-alt: #{rem(150)};
   }

@@ -7,7 +7,11 @@
   min-height: rem(450);
   gap: rem(45) rem(90);
   width: 100%;
+  justify-content: end;
 
+  @include laptop {
+    padding-bottom: rem(180);
+  }
 
   &__main {
     display: flex;
@@ -89,12 +93,11 @@
     background-color: transparent;
     position: static;
     z-index: 1;
-    width: 60vw;
     box-shadow: none;
     min-height: 0;
-
+    width: 140%;
     &-grid {
-      width: 80vw;
+      width: calc(100% - (var(--container-padding-x-alt) * 2));
 
       @include laptop {
         grid-template-columns: repeat(2, 1fr);
@@ -138,6 +141,30 @@
       font-size: 14px;
       text-align: center;
       color: #868686;
+    }
+  }
+
+  &__other {
+    background-color: rgba(38, 38, 38, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(280);
+    height: rem(35);
+    width: 100vw;
+    padding-inline: rem(16);
+
+    @include laptop {
+      gap: rem(100);
+    }
+
+    @include tablet {
+      gap: rem(16);
+    }
+
+    & * {
+      color: rgba(134, 134, 134, 1);
+      font-size: rem(14);
     }
   }
 }
