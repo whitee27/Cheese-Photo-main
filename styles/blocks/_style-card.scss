@@ -1,0 +1,272 @@
+@use "../helpers" as *;
+
+.style-card {
+  position: relative;
+  z-index: 100;
+  &__opened {
+    border-radius: rem(15);
+    padding: rem(20);
+    width: rem(665);
+    height: rem(615);
+    box-shadow: 0 rem(13) rem(24) 0 rgba(0, 0, 0, 0.05);
+    border: rem(1) solid var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(25);
+
+    @include laptop {
+      padding: rem(15);
+      row-gap: rem(20);
+      height: rem(604);
+    }
+
+    @include mobile {
+      width: rem(342);
+    }
+  }
+
+  &__unopened {
+    cursor: pointer;
+    border-radius: rem(15);
+    padding: rem(20);
+    height: rem(615);
+    width: rem(138);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-light);
+    opacity: 0.7;
+    border: rem(1) solid rgba(0, 0, 0, 0.06);
+    @include hover {
+      background-color: var(--color-yellow);
+      opacity: 1;
+    }
+
+    @include laptop {
+      height: rem(125);
+      width: rem(665);
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      width: rem(342);
+      opacity: 1;
+    }
+  }
+
+  &__images {
+    display: flex;
+    column-gap: rem(18);
+  }
+
+  &__mini-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: rem(18);
+
+    @include mobile {
+      @include visually-hidden;
+    }
+  }
+  
+  &__big-image,
+  &__mini-image {
+    border-radius:  rem(15);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    @include mobile {
+      row-gap: rem(20);
+    }
+  }
+
+  &__header,
+  &__main {
+    display: flex;
+    column-gap: rem(4);
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(12);
+      align-items: start;
+    }
+  }
+
+  &__main {
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(20);
+      align-items: start;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(26);
+    line-height: 129%;
+    color:  var(--color-yellow-alt);
+
+    &--unopened {
+      position: relative;
+      transform: rotate(-90deg);
+      font-size: rem(42);
+      color: #212529;
+      pointer-events:  none;
+      user-select: none;
+      text-align: right;
+      text-wrap: nowrap;
+
+      @include laptop {
+        font-size: rem(26);
+      }
+      &--1 {
+        top: rem(285);
+        left: rem(-32);
+      }
+
+      &--2 {
+        top: rem(190);
+        left: rem(-32);
+      }
+
+      &--3 {
+        top: rem(122);
+        left: rem(-6);
+
+        &-mini {
+          font-size: rem(21);
+          font-weight: 500;
+          top: rem(-30);
+          left: rem(105);
+        }
+      }
+
+      &--4 {
+        top: rem(105);
+        left: rem(-30);
+      }
+
+      &--5 {
+        top: rem(125);
+        left: rem(-6);
+        line-height: 1.2;
+      }
+
+      @include laptop {
+        position: static;
+        transform: rotate(0);
+        text-align: left;
+        line-height: 1;
+      }
+    }
+  }
+
+  &__cost {
+    font-weight: 700;
+    font-size: rem(22);
+    line-height: 1;
+    color: #212529;
+
+    &--text {
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 210%;
+    }
+
+    &--ruble {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 210%;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: 120%;
+    color: #212529;
+
+    &--text {
+      font-weight: 500;
+      font-size: rem(22);
+      line-height: 153%;
+    }
+
+    &--ruble {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 153%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(14);
+
+    @include laptop {
+      align-items: start;
+    }
+  }
+
+  &__materials {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(8);
+
+    &-title {
+      font-weight: 400;
+      font-size: rem(14);
+      color: #212529;
+      opacity: 0.6;
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: rem(16);
+      color: #212529;
+      line-height: 1.2;
+    }
+  }
+
+  &__main-button {
+    border-radius: rem(6);
+    padding: rem(22) rem(60);
+    min-height: rem(61);
+    font-weight: 600;
+    font-size: rem(15);
+    line-height: 113%;
+    color: #2f2020;
+    background-color: var(--color-yellow);
+    border: none;
+
+    @include mobile {
+      width: rem(312);
+    }
+  }
+
+  &__unopened-button {
+    border: rem(1) solid var(--color-dark);
+    border-radius: rem(6);
+    padding: rem(8) rem(20);
+    min-width: rem(98) ;
+    min-height: rem(31);
+
+    @include hover {
+      background-color: transparent;
+      border: rem(1) solid var(--color-dark);
+    }
+
+    @include laptop {
+      @include visually-hidden;
+    }
+  }
+}

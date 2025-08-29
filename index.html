@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Cheese Photo | Главная</title>
+    <link rel="stylesheet" href="./styles/main.css"
+
+
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="./scripts/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="hero__wrapper">
+      <header class="header container" data-js-header>
+        <div class="header__info hidden-mobile">
+        <span class="header__location">
+          <img
+            class="header__location-pin"
+            src="./icons/location_pin.svg"
+            alt=""
+            width="9"
+            height="13"
+            loading="lazy"
+          />
+          г. Нижний Новгород
+        </span>
+
+          <div class="header__contacts">
+          <span
+          ><a href="tel:79632702379" class="header__tel"
+          >+7 963 270 23 79</a
+          ></span
+          >
+            <div class="header__soc1als">
+              <button class="button header__button" type="button">
+                Заказать звонок
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.453885 11.6295L2.72475 11.034L2.94385 11.164C3.86506 11.7104 4.92103 11.9996 5.99768 12H6.00011C9.30711 12 11.9987 9.30934 12 6.00217C12.0006 4.39953 11.3771 2.89264 10.2443 1.75892C9.11153 0.625212 7.60506 0.000555445 6.00247 0C2.69291 0 0.00131371 2.69039 5.10174e-07 5.99731C-0.000464343 7.13062 0.316748 8.23432 0.917355 9.18925L1.06001 9.41618L0.453885 11.6295ZM9.38985 7.55638C9.51565 7.61716 9.6006 7.6582 9.63688 7.71873C9.68196 7.79391 9.68196 8.15492 9.53173 8.57617C9.38136 8.99734 8.66077 9.38174 8.31419 9.43349C8.00345 9.47993 7.6102 9.4993 7.17813 9.36203C6.91614 9.27895 6.58019 9.16801 6.14985 8.98222C4.45889 8.25233 3.31615 6.61403 3.10017 6.30438C3.08504 6.28269 3.07446 6.26752 3.06856 6.25964L3.0671 6.2577C2.97164 6.13038 2.33205 5.27731 2.33205 4.39442C2.33205 3.56387 2.74017 3.12854 2.92803 2.92816C2.9409 2.91443 2.95274 2.90181 2.96334 2.89023C3.12867 2.70971 3.32409 2.66459 3.44433 2.66459C3.56457 2.66459 3.68494 2.6657 3.79004 2.67097C3.803 2.67162 3.81649 2.67154 3.83044 2.67146C3.93555 2.67085 4.06659 2.67008 4.19587 2.98049C4.2456 3.09995 4.31837 3.27704 4.39512 3.46383C4.55033 3.84156 4.72182 4.2589 4.75199 4.3193C4.79709 4.40955 4.82714 4.51481 4.76702 4.6352C4.758 4.65325 4.74965 4.67029 4.74167 4.68656C4.69652 4.77872 4.6633 4.84651 4.58666 4.93597C4.55652 4.97114 4.52537 5.00906 4.49422 5.04698C4.43217 5.12253 4.37012 5.19806 4.31609 5.25187C4.22579 5.34178 4.13179 5.43933 4.23701 5.61985C4.34223 5.80036 4.70422 6.39079 5.24044 6.86892C5.81685 7.38286 6.31782 7.60009 6.57175 7.71019C6.62134 7.73169 6.6615 7.74911 6.69097 7.76385C6.87128 7.85414 6.9765 7.83903 7.08172 7.71873C7.18695 7.5984 7.53262 7.19221 7.65285 7.01173C7.77307 6.83128 7.89337 6.86134 8.05867 6.92149C8.22404 6.98172 9.11083 7.41787 9.29121 7.50811C9.32642 7.52574 9.35933 7.54164 9.38985 7.55638Z"
+                    fill="#151515"
+                  />
+                </svg>
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  width="16"
+                  height="10"
+                  viewBox="0 0 16 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.6235 0.69395C15.7421 0.30251 15.6235 0.0178071 15.0982 0.0178071H13.3528C12.9123 0.0178071 12.7089 0.266896 12.5903 0.533844C12.5903 0.533844 11.6922 2.81141 10.4382 4.28824C10.0315 4.7153 9.84515 4.85765 9.6249 4.85765C9.50624 4.85765 9.35377 4.7153 9.35377 4.32386V0.676143C9.35377 0.213527 9.21821 0 8.84538 0H6.10028C5.82915 0 5.65972 0.213527 5.65972 0.427054C5.65972 0.871915 6.28667 0.978653 6.35445 2.2242V4.92882C6.35445 5.51604 6.2528 5.62277 6.0325 5.62277C5.43942 5.62277 3.99909 3.3274 3.13488 0.711757C2.9654 0.19572 2.79597 0 2.35541 0H0.593076C0.0847302 0 0 0.249141 0 0.516037C0 0.99646 0.593076 3.41638 2.76205 6.61923C4.20243 8.80782 6.2528 9.98219 8.09983 9.98219C9.21821 9.98219 9.35377 9.7153 9.35377 9.27049V7.61569C9.35377 7.08185 9.45542 6.99292 9.81129 6.99292C10.0655 6.99292 10.523 7.13522 11.5566 8.18505C12.7428 9.4306 12.9461 10 13.607 10H15.3524C15.8607 10 16.098 9.7331 15.9624 9.21707C15.8099 8.70108 15.2338 7.95377 14.4881 7.06404C14.0815 6.56587 13.4714 6.01427 13.285 5.74732C13.0309 5.39149 13.0986 5.24914 13.285 4.92882C13.2681 4.92882 15.4032 1.76159 15.6235 0.69395Z"
+                    fill="#151515"
+                  />
+                </svg>
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  width="14"
+                  height="10"
+                  viewBox="0 0 14 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.99973 4.29845C8.10709 4.29845 13.4913 1.5 13.4913 1.5L13.5 1C13.5 0.448 13.0153 0 12.4164 0H1.58302C0.984707 0 0.5 0.448 0.5 1V1.4455C0.5 1.4455 5.94322 4.29845 6.99973 4.29845Z"
+                    fill="#151515"
+                  />
+                  <path
+                    d="M6.99973 5.67345C5.94322 5.67345 0.508655 3 0.508655 3L0.5 9C0.5 9.552 0.985248 10 1.58302 10H12.4164C13.0153 10 13.5 9.552 13.5 9L13.4913 3C13.4913 3 8.15794 5.67345 6.99973 5.67345Z"
+                    fill="#151515"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__main hidden-mobile">
+          <div class="header__content">
+            <a href="/" aria-label="Главная" title="Главная">
+              <img
+                class="header__logo"
+                src="./icons/logo.svg"
+                alt="Сеть магазинов Cheese Photo"
+                width="212"
+                height="54"
+              />
+            </a>
+            <button
+              class="header__catalog"
+              type="button"
+              aria-label="Открыть каталог"
+              title="Открыть каталог"
+            >
+              <svg
+                width="19"
+                height="17"
+                viewBox="0 0 19 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="19" height="2.6" rx="1.3" fill="#151515" />
+                <rect y="7.2" width="12" height="2.6" rx="1.3" fill="#151515" />
+                <rect y="14.4" width="19" height="2.6" rx="1.3" fill="#151515" />
+              </svg>
+              <span class="hidden-mobile">Каталог</span>
+            </button>
+          </div>
+          <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Календари 2024 </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Картина на холсте </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Оцифровка видеокассет </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Акции </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Контакты </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__overlay hidden-mobile visually-hidden">
+          <div class="">
+            <ul class="header__overlay-grid">
+              <li class="header__overlay-rubric">
+                <div class="header__overlay-rubric-heading">
+                  <h2 class="header__overlay-rubric-title">Фотоуслуги</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+                <a class="header__overlay-rubric-link" href="/"> Фотопечать </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Фото на документы
+                </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Реставрация фото
+                </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Выездная фотостудия
+                </a>
+              </li>
+              <li class="header__overlay-rubric">
+                <div class="header__overlay-rubric-heading">
+                  <h2 class="header__overlay-rubric-title">Визитки</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+                <a class="header__overlay-rubric-link" href="/">
+                  Стандартные визитки 90х50
+                </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Евровизитки 85х55 мм
+                </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Календарик (100 х70 мм)
+                </a>
+              </li>
+              <li class="header__overlay-rubric">
+                <div class="header__overlay-rubric-heading">
+                  <h2 class="header__overlay-rubric-title">Листовки</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+                <a class="header__overlay-rubric-link" href="/">
+                  Листовки на бумаге
+                </a>
+                <a class="header__overlay-rubric-link" href="/">
+                  Листовки на картоне
+                </a>
+                <div class="header__overlay-rubric-heading">
+                  <h2 class="header__overlay-rubric-title">Буклеты</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+                <div
+                  class="header__overlay-rubric-heading header__overlay-rubric-heading--alt"
+                >
+                  <h2 class="header__overlay-rubric-title">Афиши</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+              </li>
+              <li class="header__overlay-rubric">
+                <div class="header__overlay-rubric-heading">
+                  <h2 class="header__overlay-rubric-title">Фотоподарки</h2>
+                  <div class="header__overlay-rubric-line"></div>
+                </div>
+                <div class="header__overlay-rubric-cols">
+                  <div class="header__overlay-rubric-first-col">
+                    <a class="header__overlay-rubric-link" href="/">
+                      Печать на кружках
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/">
+                      Печать на футболках
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/">
+                      Печать на подушках
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/">
+                      Изготовление магнитов
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/"> Фотоплед </a>
+                  </div>
+                  <div class="header__overlay-rubric-second-col">
+                    <a class="header__overlay-rubric-link" href="/">
+                      Пазл на заказ
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/">
+                      Брелок гос номер
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/">
+                      Изготовление <br />
+                      календарей
+                    </a>
+                    <a class="header__overlay-rubric-link" href="/"> Прочее </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-overlay-mobile visible-mobile">
+          <div class="header-overlay-mobile__head">
+            <a href="/" aria-label="Главная" title="Главная"
+            ><img
+              src="./icons/logo.svg"
+              alt="Логотип Cheese Photo"
+              class="header-overlay-mobile__logo"
+              width="189"
+              height="48"
+            /></a>
+            <button
+              class="header-overlay-mobile__catalog"
+              type="button"
+              aria-label="Открыть меню"
+              title="Открыть меню"
+              data-js-header-burger-button
+            >
+              <svg
+                width="19"
+                height="17"
+                viewBox="0 0 19 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="19" height="2.6" rx="1.3" fill="#151515" />
+                <rect y="7.2" width="12" height="2.6" rx="1.3" fill="#151515" />
+                <rect y="14.4" width="19" height="2.6" rx="1.3" fill="#151515" />
+              </svg>
+            </button>
+          </div>
+          <div class="header-overlay-mobile__main" data-js-header-overlay>
+            <div class="accordion">
+              <ul class="accordion__list">
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <header class="accordion__header">
+                        <h2 class="accordion__header-title">Фотоуслуги</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </header>
+                    </summary>
+                    <div class="accordion__rubric-body">
+                      <ul class="aaccordion__rubric-list">
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Фотопечать</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Фото на документы</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Реставрация фото</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Выездная фотостудия</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <div class="accordion__header">
+                        <h2 class="accordion__header-title">Визитки</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </div>
+                    </summary>
+                    <div class="accordion__rubric-body">
+                      <ul class="aaccordion__rubric-list">
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Стандартные визитки 90х50</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Евровизитки 85х55 мм</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Календарик (100 х70 мм)</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <div class="accordion__header">
+                        <h2 class="accordion__header-title">Листовки</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </div>
+                    </summary>
+                    <div class="accordion__rubric-body">
+                      <ul class="aaccordion__rubric-list">
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Листовки на бумаге</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Листовки на картоне</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <div class="accordion__header">
+                        <h2 class="accordion__header-title">Буклеты</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </div>
+                    </summary>
+                  </details>
+                </li>
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <div class="accordion__header">
+                        <h2 class="accordion__header-title">Афиши</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </div>
+                    </summary>
+                  </details>
+                </li>
+                <li class="accordion__item">
+                  <details class="accordion__rubric">
+                    <summary class="accordion__rubric-header">
+                      <div class="accordion__header">
+                        <h2 class="accordion__header-title">Фотоподарки</h2>
+                        <div class="accordion__header-line"></div>
+                        <img
+                          class="accordion__header-arrow"
+                          src="./icons/arrow-right.svg"
+                          alt=""
+                          width="5"
+                          height="10"
+                          loading="lazy"
+                        />
+                      </div>
+                    </summary>
+                    <div class="accordion__rubric-body">
+                      <ul class="aaccordion__rubric-list">
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Печать на кружках</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Печать на футболках</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Печать на подушках</a
+                          >
+                        </li>
+
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Изготовление магнитов</a
+                          >
+                        </li>
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link">Фотоплед</a>
+                        </li>
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Пазл на заказ</a
+                          >
+                        </li>
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Брелок гос номер</a
+                          >
+                        </li>
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link"
+                          >Изготовление календарей</a
+                          >
+                        </li>
+                        <li class="accordion__rubric-item">
+                          <a href="/" class="accordion__rubric-link">Прочее</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <div class="soc1als__links">
+                    <b class="soc1als__links-name">Телефон</b>
+                    <a href="tel:79632702379" class="soc1als__links-link"
+                    >+7 (963) 270 23 79</a
+                    >
+                  </div>
+                </li>
+                <li class="soc1als__item">
+                  <div class="soc1als__links">
+                    <b class="soc1als__links-name">E-mail</b>
+                    <a
+                      href="mailto:rgkrezh@mail.ru"
+                      class="soc1als__links-link soc1als__links-link--underlined"
+                    >rgkrezh@mail.ru</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header__soc1als">
+              <button class="button header__button" type="button">
+                Обратный звонок
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  class="whatsup"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.453885 11.6295L2.72475 11.034L2.94385 11.164C3.86506 11.7104 4.92103 11.9996 5.99768 12H6.00011C9.30711 12 11.9987 9.30934 12 6.00217C12.0006 4.39953 11.3771 2.89264 10.2443 1.75892C9.11153 0.625212 7.60506 0.000555445 6.00247 0C2.69291 0 0.00131371 2.69039 5.10174e-07 5.99731C-0.000464343 7.13062 0.316748 8.23432 0.917355 9.18925L1.06001 9.41618L0.453885 11.6295ZM9.38985 7.55638C9.51565 7.61716 9.6006 7.6582 9.63688 7.71873C9.68196 7.79391 9.68196 8.15492 9.53173 8.57617C9.38136 8.99734 8.66077 9.38174 8.31419 9.43349C8.00345 9.47993 7.6102 9.4993 7.17813 9.36203C6.91614 9.27895 6.58019 9.16801 6.14985 8.98222C4.45889 8.25233 3.31615 6.61403 3.10017 6.30438C3.08504 6.28269 3.07446 6.26752 3.06856 6.25964L3.0671 6.2577C2.97164 6.13038 2.33205 5.27731 2.33205 4.39442C2.33205 3.56387 2.74017 3.12854 2.92803 2.92816C2.9409 2.91443 2.95274 2.90181 2.96334 2.89023C3.12867 2.70971 3.32409 2.66459 3.44433 2.66459C3.56457 2.66459 3.68494 2.6657 3.79004 2.67097C3.803 2.67162 3.81649 2.67154 3.83044 2.67146C3.93555 2.67085 4.06659 2.67008 4.19587 2.98049C4.2456 3.09995 4.31837 3.27704 4.39512 3.46383C4.55033 3.84156 4.72182 4.2589 4.75199 4.3193C4.79709 4.40955 4.82714 4.51481 4.76702 4.6352C4.758 4.65325 4.74965 4.67029 4.74167 4.68656C4.69652 4.77872 4.6633 4.84651 4.58666 4.93597C4.55652 4.97114 4.52537 5.00906 4.49422 5.04698C4.43217 5.12253 4.37012 5.19806 4.31609 5.25187C4.22579 5.34178 4.13179 5.43933 4.23701 5.61985C4.34223 5.80036 4.70422 6.39079 5.24044 6.86892C5.81685 7.38286 6.31782 7.60009 6.57175 7.71019C6.62134 7.73169 6.6615 7.74911 6.69097 7.76385C6.87128 7.85414 6.9765 7.83903 7.08172 7.71873C7.18695 7.5984 7.53262 7.19221 7.65285 7.01173C7.77307 6.83128 7.89337 6.86134 8.05867 6.92149C8.22404 6.98172 9.11083 7.41787 9.29121 7.50811C9.32642 7.52574 9.35933 7.54164 9.38985 7.55638Z"
+                    fill="#151515"
+                  />
+                </svg>
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  width="17"
+                  height="14"
+                  viewBox="0 0 17 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.86151 9.23787L6.62464 12.7637C6.97268 12.7637 7.12646 12.6056 7.32072 12.4179L8.99289 10.8024L12.4717 13.3561C13.112 13.707 13.574 13.5253 13.7335 12.7655L16.0172 2.07309C16.251 1.14172 15.6599 0.719298 15.0474 0.995567L1.63739 6.13308C0.722034 6.49786 0.727371 7.00525 1.47054 7.23133L4.91186 8.2985L12.8789 3.30461C13.255 3.078 13.6002 3.19983 13.3168 3.44966L6.86131 9.23773L6.86151 9.23787Z"
+                    fill="#1A1A18"
+                  />
+                </svg>
+              </button>
+              <button
+                class="button--soc1als header__soc1als-button"
+                type="button"
+              >
+                <svg
+                  width="16"
+                  height="10"
+                  viewBox="0 0 16 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.6235 0.69395C15.7421 0.30251 15.6235 0.0178071 15.0982 0.0178071H13.3528C12.9123 0.0178071 12.7089 0.266896 12.5903 0.533844C12.5903 0.533844 11.6922 2.81141 10.4382 4.28824C10.0315 4.7153 9.84515 4.85765 9.6249 4.85765C9.50624 4.85765 9.35377 4.7153 9.35377 4.32386V0.676143C9.35377 0.213527 9.21821 0 8.84538 0H6.10028C5.82915 0 5.65972 0.213527 5.65972 0.427054C5.65972 0.871915 6.28667 0.978653 6.35445 2.2242V4.92882C6.35445 5.51604 6.2528 5.62277 6.0325 5.62277C5.43942 5.62277 3.99909 3.3274 3.13488 0.711757C2.9654 0.19572 2.79597 0 2.35541 0H0.593076C0.0847302 0 0 0.249141 0 0.516037C0 0.99646 0.593076 3.41638 2.76205 6.61923C4.20243 8.80782 6.2528 9.98219 8.09983 9.98219C9.21821 9.98219 9.35377 9.7153 9.35377 9.27049V7.61569C9.35377 7.08185 9.45542 6.99292 9.81129 6.99292C10.0655 6.99292 10.523 7.13522 11.5566 8.18505C12.7428 9.4306 12.9461 10 13.607 10H15.3524C15.8607 10 16.098 9.7331 15.9624 9.21707C15.8099 8.70108 15.2338 7.95377 14.4881 7.06404C14.0815 6.56587 13.4714 6.01427 13.285 5.74732C13.0309 5.39149 13.0986 5.24914 13.285 4.92882C13.2681 4.92882 15.4032 1.76159 15.6235 0.69395Z"
+                    fill="#151515"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="header-overlay-mobile__footer">
+              <p class="header-overlay-mobile__time">
+                <time datetime="2014">2014</time> -
+                <time datetime="2024">2024</time> Все права защищены
+              </p>
+              <p class="header-overlay-mobile__policy">
+                <a href="/"><u> Политика обработки персональных данных </u></a>
+              </p>
+              <p class="header-overlay-mobile__designed">
+                Designed by <b><u>Vlad Rusak</u></b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container-narrow">
+          <div class="hero__content">
+            <div class="hero__info">
+              <p class="hero__path"><span class="hero__path hero__path--gray">Главная</span>  /  Портрет на холсте</p>
+              <h1 class="hero__title" aria-label="hero-title" id="hero-title">Cтильный портрет на холсте</h1>
+            </div>
+            <div class="hero__description">
+              <p>Тщательная работа над фотографией, внимание
+                к деталям и высочайшее качество печати</p>
+            </div>
+            <ul class="hero__list">
+              <li class="hero__item">
+                <img
+                  src='./icons/hero_list_marker.svg'
+                  alt=''
+                  width='10'
+                  height='10'
+                  loading='lazy'
+                />
+                <p class="hero__text">Понравится каждому человеку</p>
+              </li>
+              <li class="hero__item">
+                <img
+                  src='./icons/hero_list_marker.svg'
+                  alt=''
+                  width='10'
+                  height='10'
+                  loading='lazy'
+                />
+                <p class="hero__text">Впишется в любой интерьер</p>
+              </li>
+              <li class="hero__item">
+                <img
+                  src='./icons/hero_list_marker.svg'
+                  alt=''
+                  width='10'
+                  height='10'
+                  loading='lazy'
+                />
+                <p class="hero__text">Отличный подарок на любой повод и праздник</p>
+              </li>
+            </ul>
+            <button
+              class="hero__button button hidden-mobile"
+              type="button"
+            >
+              Оформить заказ
+            </button>
+          </div>
+        </div>
+        <img
+          class="hero__wrapper-mobile visible-mobile"
+          src='./images/hero/hero_bg-main-mobile.jpg'
+          alt=''
+          width='964'
+          height='461'
+          loading='lazy'
+        />
+        <button
+          class="hero__button button visible-mobile"
+          type="button"
+        >
+          Оформить заказ
+        </button>
+      </section>
+
+    </div>
+    <main class="main">
+      <section class="stylistics container-narrow" aria-labelledby="stylistics-title">
+        <h2 class="stylistics__title" aria-label="stylistics-title" id="stylistics-title">Подберите нужную стилистику</h2>
+        <div class="stylistics__main">
+          <ul class="stylistics__list">
+            <li class="stylistics__item">
+              <div class="stylistics__card style-card__opened">
+                <div class="style-card__images">
+                  <img
+                    class="style-card__big-image"
+                    src="./images/stylistics/main.jpg"
+                    alt=""
+                    width="474"
+                    height="434"
+                    loading="lazy"
+                  />
+                  <div class="style-card__mini-images">
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/1.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/2.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/3.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                  </div>
+                </div>
+                <div class="style-card__info">
+                  <div class="style-card__header">
+                    <p class="style-card__title style-card__title--opened">Стиль Акварель</p>
+                    <span class="style-card__price"><span class="style-card__price style-card__price--text">от</span> 2690<span class="style-card__price style-card__price--ruble">₽</span></span>
+                  </div>
+                  <div class="style-card__main">
+                    <div class="style-card__materials">
+                      <p class="style-card__materials-title">Размеры и материалы:</p>
+                      <p class="style-card__materials-info">Натуральный хлопковый холст, дерево, экологичные чернила</p>
+                    </div>
+                    <button
+                      class="style-card__main-button button"
+                      type="button"
+                    >
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="stylistics__card style-card__unopened  visually-hidden">
+                <p class="style-card__title style-card__title--unopened style-card__title--unopened--1">Стиль Акварель</p>
+                <div class="card__bottom">
+                  <span class="style-card__cost"><span class="style-card__cost style-card__cost--text">от</span> 2690<span class="style-card__cost style-card__cost--ruble">₽</span></span>
+                  <button class="style-card__unopened-button button">Заказать</button>
+                </div>
+              </div>
+            </li>
+            <li class="stylistics__item">
+              <div class="stylistics__card style-card__opened  visually-hidden">
+                <div class="style-card__images">
+                  <img
+                    class="style-card__big-image"
+                    src="./images/stylistics/main.jpg"
+                    alt=""
+                    width="474"
+                    height="434"
+                    loading="lazy"
+                  />
+                  <div class="style-card__mini-images">
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/1.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/2.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/3.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                  </div>
+                </div>
+                <div class="style-card__info">
+                  <div class="style-card__header">
+                    <p class="style-card__title style-card__title--opened">Стиль Акварель</p>
+                    <span class="style-card__price"><span class="style-card__price style-card__price--text">от</span> 2690 <span class="style-card__price style-card__price--ruble">₽</span></span>
+                  </div>
+                  <div class="style-card__main">
+                    <div class="style-card__materials">
+                      <p class="style-card__materials-title">Размеры и материалы:</p>
+                      <p class="style-card__materials-info">Натуральный хлопковый холст, дерево, экологичные чернила</p>
+                    </div>
+                    <button
+                      class="style-card__main-button button"
+                      type="button"
+                    >
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="stylistics__card style-card__unopened">
+                <p class="style-card__title style-card__title--unopened style-card__title--unopened--2">Фотопечать</p>
+                <div class="style-card__bottom">
+                  <span class="style-card__cost"><span class="style-card__cost style-card__cost--text">от</span> 1990<span class="style-card__cost style-card__cost--ruble">₽</span></span>
+                  <button class="style-card__unopened-button button">Заказать</button>
+                </div>
+              </div>
+            </li>
+            <li class="stylistics__item">
+              <div class="stylistics__card style-card__opened visually-hidden">
+                <div class="style-card__images">
+                  <img
+                    class="style-card__big-image"
+                    src="./images/stylistics/main.jpg"
+                    alt=""
+                    width="474"
+                    height="434"
+                    loading="lazy"
+                  />
+                  <div class="style-card__mini-images">
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/1.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/2.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/3.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                  </div>
+                </div>
+                <div class="style-card__info">
+                  <div class="style-card__header">
+                    <p class="style-card__title style-card__title--opened">Стиль Акварель</p>
+                    <span class="style-card__price"><span class="style-card__price style-card__price--text">от</span> 2690 <span class="style-card__price style-card__price--ruble">₽</span></span>
+                  </div>
+                  <div class="style-card__main">
+                    <div class="style-card__materials">
+                      <p class="style-card__materials-title">Размеры и материалы:</p>
+                      <p class="style-card__materials-info">Натуральный хлопковый холст, дерево, экологичные чернила</p>
+                    </div>
+                    <button
+                      class="style-card__main-button button"
+                      type="button"
+                    >
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="stylistics__card style-card__unopened">
+                <p class="style-card__title style-card__title--unopened style-card__title--unopened--3">Dream Art<br>
+                  <span class="style-card__title style-card__title--unopened style-card__title--unopened--3 style-card__title--unopened--3-mini">(Дрим Арт)</span></p>
+                <div class="style-card__bottom">
+                  <span class="style-card__cost"><span class="style-card__cost style-card__cost--text">от</span> 2690<span class="style-card__cost style-card__cost--ruble">₽</span></span>
+                  <button class="style-card__unopened-button button">Заказать</button>
+                </div>
+              </div>
+            </li>
+            <li class="stylistics__item">
+              <div class="stylistics__card style-card__opened visually-hidden">
+                <div class="style-card__images">
+                  <img
+                    class="style-card__big-image"
+                    src="./images/stylistics/main.jpg"
+                    alt=""
+                    width="474"
+                    height="434"
+                    loading="lazy"
+                  />
+                  <div class="style-card__mini-images">
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/1.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/2.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/3.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                  </div>
+                </div>
+                <div class="style-card__info">
+                  <div class="style-card__header">
+                    <p class="style-card__title style-card__title--opened">Стиль Акварель</p>
+                    <span class="style-card__price"><span class="style-card__price style-card__price--text">от</span> 2690 <span class="style-card__price style-card__price--ruble">₽</span></span>
+                  </div>
+                  <div class="style-card__main">
+                    <div class="style-card__materials">
+                      <p class="style-card__materials-title">Размеры и материалы:</p>
+                      <p class="style-card__materials-info">Натуральный хлопковый холст, дерево, экологичные чернила</p>
+                    </div>
+                    <button
+                      class="style-card__main-button button"
+                      type="button"
+                    >
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="stylistics__card style-card__unopened">
+                <p class="style-card__title style-card__title--unopened style-card__title--unopened--4">Love is…</p>
+                <div class="style-card__bottom">
+                  <span class="style-card__cost"><span class="style-card__cost style-card__cost--text">от</span> 2490<span class="style-card__cost style-card__cost--ruble">₽</span></span>
+                  <button class="style-card__unopened-button button">Заказать</button>
+                </div>
+              </div>
+            </li>
+            <li class="stylistics__item">
+              <div class="stylistics__card style-card__opened visually-hidden">
+                <div class="style-card__images">
+                  <img
+                    class="style-card__big-image"
+                    src="./images/stylistics/main.jpg"
+                    alt=""
+                    width="474"
+                    height="434"
+                    loading="lazy"
+                  />
+                  <div class="style-card__mini-images">
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/1.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/2.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                    <img
+                      class="style-card__mini-image"
+                      src='./images/stylistics/3.jpg'
+                      alt=''
+                      width='133'
+                      height='133'
+                      loading='lazy'
+                    />
+                  </div>
+                </div>
+                <div class="style-card__info">
+                  <div class="style-card__header">
+                    <p class="style-card__title style-card__title--opened">Стиль Акварель</p>
+                    <span class="style-card__price"><span class="style-card__price style-card__price--text">от</span> 2690 <span class="style-card__price style-card__price--ruble">₽</span></span>
+                  </div>
+                  <div class="style-card__main">
+                    <div class="style-card__materials">
+                      <p class="style-card__materials-title">Размеры и материалы:</p>
+                      <p class="style-card__materials-info">Натуральный хлопковый холст, дерево, экологичные чернила</p>
+                    </div>
+                    <button
+                      class="style-card__main-button button"
+                      type="button"
+                    >
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="stylistics__card style-card__unopened ">
+                <p class="style-card__title style-card__title--unopened style-card__title--unopened--5">Полароид<br>& Коллаж</p>
+                <div class="style-card__bottom">
+                  <span class="style-card__cost"><span class="style-card__cost style-card__cost--text">от</span> 2490<span class="style-card__cost style-card__cost--ruble">₽</span></span>
+                  <button class="style-card__unopened-button button">Заказать</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="possibilities container-narrow" aria-labelledby="possibilities-title">
+        <h2 class="possibilities__title" aria-label="possibilities-title" id="possibilities-title">У нас вы можете</h2>
+        <ul class="possibilities__list">
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/1.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">Получить эскиз
+              дизайнера перед
+              изготовлением картины</p>
+          </li>
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/2.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">Упаковать картину
+              и придать подарку
+              праздничный вид</p>
+          </li>
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/3.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">Высказать свои
+              пожелания и получить
+              исправления бесплатно!</p>
+          </li>
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/4.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">Заказать бережную
+              доставку до двери
+              нашим курьером</p>
+          </li>
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/5.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">У нас можно оформить
+              заказ онлайн без
+              визита в мастерскую</p>
+          </li>
+          <li class="possibilities__item">
+            <img
+              class='possibilities__icon'
+              src='./images/possibilities/6.svg'
+              alt=''
+              width='97'
+              height='97'
+              loading='lazy'
+            />
+            <p class="possibilities__info">Получить скидку при заказе
+              нескольких портретов <br>
+              <span class="possibilities__info possibilities__info--additional">(Уточняйте у менеджеров)</span></p>
+          </li>
+        </ul>
+      </section>
+      <section class="materials container-narrow" aria-labelledby="materials-title">
+        <div class="materials__main">
+          <h2 class="materials__title" aria-label="materials-title" id="materials-title">
+              <span class="materials__title materials__title--yellow">Специализированные</span>
+            <br>
+              экологичные материалы
+            <svg width="36" height="39" viewBox="0 0 36 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.57726 0.70564C2.78918 3.4752 0.733674 7.69259 0.136661 11.8682C-0.0448831 13.1379 -0.045651 15.4226 0.134954 16.6515C0.563732 19.568 1.621 22.0584 3.50418 24.5879C3.82512 25.019 4.18122 25.4609 4.29545 25.57L4.50327 25.7684L4.82362 24.7427C6.44753 19.5444 9.57737 14.7029 13.6363 11.1108L14.4428 10.3971L14.3869 9.96726C14.3562 9.73083 14.1655 9.02459 13.9632 8.39795C12.682 4.42979 10.2024 1.37103 7.33051 0.216064C6.4616 -0.133397 6.40632 -0.117896 5.57726 0.70564ZM33.1093 4.95769C22.5224 5.63658 13.7287 10.7355 8.79745 19.0548C7.01221 22.0665 5.80521 25.3305 5.17339 28.8549C5.06181 29.4776 4.94373 30.2501 4.91115 30.5717C4.8533 31.1418 4.85834 31.163 5.11077 31.4207C5.56591 31.8853 4.55002 32.5087 14.8952 25.4169C18.2266 23.1332 21.0087 21.2308 21.0778 21.1894C21.2193 21.1045 20.5139 22.1549 19.5558 23.4558C16.4172 27.7174 12.2489 31.5832 7.93631 34.2323C5.91646 35.4729 4.02356 36.3989 1.75716 37.2548C1.10026 37.5029 0.495568 37.7858 0.413498 37.8836C0.0877769 38.2715 0.395668 39 0.885188 39C1.54166 39 5.34888 37.3523 7.42461 36.1699L8.54595 35.5311L9.24653 35.8622C12.2175 37.266 15.8376 37.6077 19.5021 36.8303C20.9922 36.5142 21.8436 36.2388 23.0658 35.6776C30.7544 32.1474 35.2217 25.4849 35.9306 16.4913C36.0725 14.6903 35.9875 11.1475 35.7611 9.42944C35.5531 7.85047 35.1102 5.62822 34.9345 5.28137C34.814 5.04355 34.4974 4.84875 34.2768 4.87661C34.2212 4.88358 33.6958 4.92015 33.1093 4.95769Z" fill="#2F2825"/>
+            </svg>
+
+          </h2>
+          <ul class="materials__list">
+            <li class="materials__item">
+                <img
+                  class="materials__icon"
+                  src='./images/materials/list-icon.png'
+                  alt=''
+                  width='32'
+                  height='32'
+                  loading='lazy'
+                />
+                <p class="materials__info">Натуральное <span class="materials__info materials__info--bold">хлопковое полотно</span> холста</p>
+              </li>
+            <li class="materials__item">
+                <img
+                  class="materials__icon"
+                  src='./images/materials/list-icon.png'
+                  alt=''
+                  width='32'
+                  height='32'
+                  loading='lazy'
+                />
+                <p class="materials__info">Экологичные безвредные <span class="materials__info materials__info--bold">сертифицированные чернила</span> без испарений</p>
+              </li>
+            <li class="materials__item">
+                <img
+                  class="materials__icon"
+                  src='./images/materials/list-icon.png'
+                  alt=''
+                  width='32'
+                  height='32'
+                  loading='lazy'
+                />
+                <p class="materials__info">Подрамник из <span class="materials__info materials__info--bold">натурального дерева </span>с угловыми пропилами под клинья</p>
+              </li>
+            <li class="materials__item">
+                <img
+                  class="materials__icon"
+                  src='./images/materials/list-icon.png'
+                  alt=''
+                  width='32'
+                  height='32'
+                  loading='lazy'
+                />
+                <p class="materials__info">Клинья, <span class="materials__info materials__info--bold">препядствующие провисанию</span> полотна</p>
+              </li>
+          </ul>
+        </div>
+        <img
+          class="materials__image"
+          src='./images/materials/bg-image.png'
+          alt=''
+          width='675'
+          height='609'
+          loading='lazy'
+        />
+      </section>
+      <section class="process container-narrow" aria-labelledby="process-title">
+        <h2 class="process__title" aria-label="process-title" id="process-title">Как мы работаем</h2>
+        <ul class="process__list">
+          <li class="process__item hidden-mobile">
+            <div class="process__card card card--wide">
+              <img
+                class="card__image card__image--wide"
+                src='images/process/1.jpg'
+                alt=''
+                width='366'
+                height='316'
+                loading='lazy'
+              />
+              <div class="card__text">
+                <h3 class="card__title">1. Заказ</h3>
+                <p class="card__description">Оформите заказ на сайте, заполнив форму
+                  и загрузив исходные фотографии</p>
+              </div>
+            </div>
+          </li>
+          <li class="process__item hidden-mobile">
+            <div class="process__card card card--wide">
+              <img
+                class="card__image card__image--wide"
+                src='images/process/2.jpg'
+                alt=''
+                width='366'
+                height='316'
+                loading='lazy'
+              />
+              <div class="card__text card__text">
+                <h3 class="card__title">2. Консультация</h3>
+                <p class="card__description">Наши менеджеры свяжутся с Вами, помогут с выбором и уточнят детали заказа
+                  <br>
+                  <span class="possibilities__info possibilities__info--additional">(Если потребуется)</span></p>
+              </div>
+            </div>
+          </li>
+
+          <li class="process__item">
+            <div class="process__card card card--small">
+              <img
+                class="card__image"
+                src='images/process/3.jpg'
+                alt=''
+                width='420'
+                height='236'
+                loading='lazy'
+              />
+              <div class="card__text card__text--small">
+                <h3 class="card__title">3. Доставка</h3>
+                <p class="card__description">Вы можете забрать заказ в одном из наших уютных офисов самостоятельно либо  заказать доставку курьером до дома</p>
+              </div>
+            </div>
+          </li>
+          <li class="process__item">
+            <div class="process__card card card--small">
+              <img
+                class="card__image"
+                src='images/process/4.jpg'
+                alt=''
+                width='420'
+                height='236'
+                loading='lazy'
+              />
+              <div class="card__text  card__text--small">
+                <h3 class="card__title">4. Оплата</h3>
+                <p class="card__description">Вы сможете оплатить выбранные услуги: наличными при получении, безналичным способом в офисе или с юр. счета</p>
+              </div>
+            </div>
+          </li>
+          <li class="process__item visible-mobile">
+            <div class="process__card card card--small">
+              <img
+                class="card__image"
+                src='images/process/1_mobile.jpg'
+                alt=''
+                width='340'
+                height='191'
+                loading='lazy'
+              />
+              <div class="card__text card__text--small">
+                <h3 class="card__title">1.
+                  Заказ</h3>
+                <p class="card__description">Оформите заказ на сайте, заполнив форму
+                  и загрузив исходные фотографии</p>
+              </div>
+            </div>
+          </li>
+          <li class="process__item visible-mobile">
+            <div class="process__card card card--small">
+              <img
+                class="card__image"
+                src='images/process/2_mobile.jpg'
+                alt=''
+                width='340'
+                height='191'
+                loading='lazy'
+              />
+              <div class="card__text card__text--small">
+                <h3 class="card__title">2. Консультация</h3>
+                <p class="card__description">Наши менеджеры свяжутся с Вами, помогут с выбором и уточнят детали заказа <span class="possibilities__info possibilities__info--additional">(Если потребуется)</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="process__item">
+            <div class="process__card card card--small">
+              <img
+                class="card__image"
+                src='images/process/5.jpg'
+                alt=''
+                width='420'
+                height='236'
+                loading='lazy'
+              />
+              <div class="card__text  card__text--small">
+                <h3 class="card__title">5. Акции и скидки</h3>
+                <p class="card__description">Хотите быть в курсе наших конкурсов и распродаж? Следите за новостями на сайте и в наших соцсетях</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="time container-narrow" aria-labelledby="time-title">
+        <img
+          class="time__image"
+          src='./images/time/bg.jpg'
+          alt=''
+          width='668'
+          height='557'
+          loading='lazy'
+        />
+        <div class="time__main">
+          <h2 class="time__title" aria-label="time-title" id="time-title">Студия портретов
+            <span class="time__title time__title--yellow">работает ежедневно</span></h2>
+          <div class="time__info">
+            <p class="time__description">Если торопиться некуда, <span class="time__description--bold"> выполним работу</span> <span class="time__description--yellow">за 2-3 дня</span></p>
+            <p class="time__description">Возможно  <span class="time__description--bold">срочное изготовление</span> в течение дня
+              <span class="time__description--bold">без нервов и доплат</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="table container-narrow" aria-labelledby="table-title">
+        <div class="table__header">
+          <h2 class="table__header-title" aria-label="table-title" id="table-title">Оформить заказ</h2>
+          <button
+            class="table__header-button button hidden-mobile"
+            type="button"
+          >
+            Оформить заказ
+          </button>
+
+          <p class="table__header-swipe visible-mobile">Можно скролить влево <svg width="34" height="16" viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.6">
+              <path d="M7.335 14.3346L1 7.99955L7.335 1.66455" stroke="#2F2825" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="12.71" y="7.62451" width="8.25" height="0.75" rx="0.375" stroke="#2F2825" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.335 14.3346L32.67 7.99955L26.335 1.66455" stroke="#2F2825" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+          </p>
+        </div>
+        <div class="table__main">
+          <table>
+            <tr class="table__row-first">
+              <td>Размер картины</td>
+              <td class="table__first table__first--1">30x40</td>
+              <td class="table__first table__first--2">40x40</td>
+              <td class="table__first table__first--3">40x50</td>
+              <td class="table__first table__first--4">40x60</td>
+              <td class="table__first table__first--5">50x50</td>
+              <td class="table__first table__first--6">50x60</td>
+              <td class="table__first table__first--7">50x70</td>
+              <td class="table__first table__first--8">55x80</td>
+              <td class="table__first table__first--9">60x90</td>
+              <td class="table__first table__first--10">70x100</td>
+              <td class="table__first table__first--11">80x120</td>
+            </tr>
+            <tr class="table__row-second">
+              <td>Стоимость</td>
+              <td class="table__second table__second--1">1990 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--2">2400 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--3">2550 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--4">2550 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--5">2650 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--6">2850 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--7">3100 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--8">3500 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--9">4550 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--10">4950 <span class="mini-ruble">₽</span></td>
+              <td class="table__second table__second--11">5500 <span class="mini-ruble">₽</span></td>
+            </tr>
+          </table>
+        </div>
+        <p class="table__description">Обработка фото в различных стилях оплачивается отдельно и составляет <span class="table__description table__description--bold">700 ₽ за каждого человека на фото</span></p>
+        <button
+          class="table__header-button button visible-mobile"
+          type="button"
+        >
+          Оформить заказ
+        </button>
+        <h3 class="table__title">Самые популярные размеры холстов</h3>
+        <p class="table__header-swipe visible-mobile">Можно скролить влево <svg width="34" height="16" viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.6">
+            <path d="M7.335 14.3346L1 7.99955L7.335 1.66455" stroke="#2F2825" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="12.71" y="7.62451" width="8.25" height="0.75" rx="0.375" stroke="#2F2825" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.335 14.3346L32.67 7.99955L26.335 1.66455" stroke="#2F2825" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        </p>
+        <ul class="table__list">
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image is-active"
+                src='./images/table/1-active.png'
+                alt='30x40'
+                width='90'
+                height='65'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--1">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/2.png'
+                alt='40x50'
+                width='90'
+                height='106'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--2 visually-hidden">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/3.png'
+                alt='40x60'
+                width='90'
+                height='131'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--3 visually-hidden">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/4.png'
+                alt='60x90'
+                width='227'
+                height='131'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--4 visually-hidden">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/5.png'
+                alt='70x70'
+                width='143'
+                height='141'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--5 visually-hidden">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/6.png'
+                alt='50x70'
+                width='132'
+                height='178'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--6 visually-hidden">Как небольшая книга</p>
+          </li>
+          <li class="table__item">
+            <div class="table__item-block">
+              <img
+                class="table__item-image"
+                src='./images/table/7.png'
+                alt='70x100'
+                width='140'
+                height='182'
+                loading='lazy'
+              />
+            </div>
+            <p class="table__item-sub table__item-sub--7 visually-hidden">Как небольшая книга</p>
+          </li>
+        </ul>
+        <img
+          class="table__man-image"
+          src='./images/table/man.png'
+          alt=''
+          width='211'
+          height='367'
+          loading='lazy'
+        />
+        <img
+          class="table__man-image-mobile visible-mobile"
+          src='./images/table/man-mobile.png'
+          alt=''
+          width='275'
+          height='336'
+          loading='lazy'
+        />
+      </section>
+      <section class="slider container-narrow" aria-labelledby="slider-title">
+        <div class="slider__controls">
+          <h2 class="slider__title" aria-label="slider-title" id="slider-title">Наши работы</h2>
+          <div class="slider__buttons hidden-mobile">
+            <button class="slider__button slider__button-prev button" type="button">
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.27946 14.4342L1.94446 8.09916L8.27946 1.76416" stroke="white" stroke-width="2.49973" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="slider__button slider__button-next button" type="button">
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.72054 14.4342L8.05554 8.09916L1.72054 1.76416" stroke="#2F2825" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src='./images/slider/1.jpg'
+                alt=''
+                width='418'
+                height='412'
+                loading='lazy'
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src='./images/slider/2.jpg'
+                alt=''
+                width='418'
+                height='412'
+                loading='lazy'
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src='./images/slider/3.jpg'
+                alt=''
+                width='418'
+                height='412'
+                loading='lazy'
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src='./images/slider/2.jpg'
+                alt=''
+                width='418'
+                height='412'
+                loading='lazy'
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src='./images/slider/3.jpg'
+                alt=''
+                width='418'
+                height='412'
+                loading='lazy'
+              />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="reviews container-narrow" aria-labelledby="reviews-title">
+        <div class="reviews__controls">
+          <h2 class="reviews__title" aria-label="reviews-title" id="reviews-title">Что о нас говорят клиенты</h2>
+          <button class="reviews__button reviews__button button hidden-mobile" type="button">
+            Перейти к услугам типографии
+          </button>
+        </div>
+        <img
+          class="reviews__bg-image hidden-mobile"
+          src='./images/reviews/bg.png'
+          alt=''
+          width='1485'
+          height='619'
+          loading='lazy'
+        />
+        <img
+          class="reviews__bg-image visible-mobile"
+          src='./images/reviews/bg-mobile.png'
+          alt=''
+          width='377'
+          height='345'
+          loading='lazy'
+        />
+        <p class="reviews__description">Посмотрите <span class="reviews__description reviews__description--yellow">актуальные и честные отзывы</span> на платформах:</p>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__rating">
+              <img
+                class="reviews__rating-image"
+                src='./images/reviews/yandex.png'
+                alt=''
+                width='133'
+                height='38'
+                loading='lazy'
+              />
+              <div class="reviews__star">
+                <span class="reviews__star-text">4.5</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="#F9A317"/>
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="url(#paint0_radial_233_10516)" fill-opacity="0.4"/>
+                  <defs>
+                    <radialGradient id="paint0_radial_233_10516" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.0001 0.512207) rotate(90) scale(14.2928 14.2928)">
+                      <stop stop-color="white"/>
+                      <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <p class="reviews__item-description">Наша средняя оценка на Я.Картах</p>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__rating">
+              <img
+                class="reviews__rating-image"
+                src='./images/reviews/2_gis.png'
+                alt=''
+                width='133'
+                height='39'
+                loading='lazy'
+              />
+              <div class="reviews__star">
+                <span class="reviews__star-text">4.8</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="#F9A317"/>
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="url(#paint0_radial_233_10516)" fill-opacity="0.4"/>
+                  <defs>
+                    <radialGradient id="paint0_radial_233_10516" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.0001 0.512207) rotate(90) scale(14.2928 14.2928)">
+                      <stop stop-color="white"/>
+                      <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <p class="reviews__item-description">Наша средняя оценка на 2Гис</p>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__rating">
+              <img
+                class="reviews__rating-image"
+                src='./images/reviews/flamp.png'
+                alt=''
+                width='154'
+                height='49'
+                loading='lazy'
+              />
+              <div class="reviews__star">
+                <span class="reviews__star-text">5.0</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="#F9A317"/>
+                  <path d="M29.2449 11.3253C29.1548 11.0519 28.9909 10.8118 28.773 10.634C28.5551 10.4563 28.2926 10.3485 28.0174 10.3239L20.8678 9.23169C20.2603 9.13888 19.7388 8.74974 19.477 8.19375L16.2562 1.35541C16.1393 1.10269 15.9568 0.889558 15.7296 0.740429C15.5024 0.591301 15.2397 0.512207 14.9716 0.512207C14.7034 0.512207 14.4407 0.591301 14.2135 0.740429C13.9863 0.889558 13.8038 1.10269 13.687 1.35541L10.4656 8.18184C10.204 8.73613 9.68429 9.12439 9.07858 9.21803L1.92569 10.3239C1.66153 10.3632 1.41317 10.4793 1.20881 10.6589C1.00446 10.8386 0.852278 11.0746 0.76955 11.3403C0.693822 11.5999 0.687027 11.8762 0.749892 12.1395C0.812758 12.4028 0.942911 12.6433 1.12638 12.835L6.35917 18.1424C6.77501 18.5642 6.96313 19.1599 6.86494 19.744L5.59395 27.3041C5.543 27.5844 5.56968 27.874 5.67085 28.1389C5.77201 28.4037 5.94344 28.6327 6.16489 28.7989C6.38073 28.9605 6.6353 29.0558 6.90004 29.0743C7.16477 29.0928 7.42918 29.0337 7.66359 28.9035L14.0837 25.3974C14.6368 25.0954 15.3058 25.0964 15.8579 25.4003L22.251 28.9184C22.4513 29.0368 22.6776 29.0986 22.9076 29.0978C23.2099 29.0989 23.5048 28.9995 23.7497 28.8138C23.9711 28.6477 24.1426 28.4187 24.2437 28.1538C24.3449 27.8889 24.3716 27.5993 24.3206 27.3191L23.0496 19.759C22.9514 19.1749 23.1396 18.5791 23.5554 18.1574L28.7882 12.85C28.9943 12.6671 29.1466 12.4268 29.2274 12.1569C29.3083 11.887 29.3144 11.5987 29.2449 11.3253Z" fill="url(#paint0_radial_233_10516)" fill-opacity="0.4"/>
+                  <defs>
+                    <radialGradient id="paint0_radial_233_10516" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.0001 0.512207) rotate(90) scale(14.2928 14.2928)">
+                      <stop stop-color="white"/>
+                      <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <p class="reviews__item-description">Наша средняя оценка на Flamp</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer container-narrow hidden-mobile">
+      <div class="footer__main">
+        <img
+          class="footer__logo"
+          src="./icons/logo.svg"
+          alt="Логотип Cheese Photo"
+          width="257"
+          height="66"
+          loading="lazy"
+        />
+        <div class="footer__contacts">
+          <div class="footer__soc1als">
+            <button
+              class="footer__button button"
+              type="button"
+            >
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.7458 12.2354C15.0765 11.5746 14.2409 11.5746 13.5759 12.2354C13.0686 12.7384 12.5613 13.2414 12.0625 13.753C11.9261 13.8937 11.811 13.9235 11.6448 13.8297C11.3165 13.6507 10.9669 13.5057 10.6515 13.3096C9.18073 12.3846 7.94872 11.1952 6.85738 9.85668C6.31598 9.19167 5.83426 8.47976 5.49748 7.67834C5.42927 7.51634 5.44206 7.40977 5.57421 7.27762C6.08151 6.78739 6.57602 6.28436 7.0748 5.78134C7.76967 5.08222 7.76967 4.26374 7.07053 3.56036C6.67407 3.15965 6.27761 2.76746 5.88115 2.36675C5.4719 1.95751 5.06691 1.544 4.6534 1.13903C3.9841 0.486803 3.14855 0.486803 2.48352 1.14329C1.97195 1.64631 1.48171 2.16213 0.961616 2.65662C0.479894 3.11276 0.236901 3.6712 0.185745 4.32342C0.104747 5.38489 0.364792 6.38667 0.731412 7.36288C1.48171 9.3835 2.6242 11.1782 4.00968 12.8237C5.88115 15.0489 8.11498 16.8095 10.7282 18.0798C11.9048 18.6511 13.124 19.0901 14.4498 19.1626C15.3621 19.2138 16.155 18.9836 16.7902 18.2717C17.2251 17.7857 17.7153 17.3424 18.1757 16.8777C18.8578 16.1871 18.8621 15.3516 18.1842 14.6695C17.3743 13.8553 16.56 13.0453 15.7458 12.2354Z" fill="#313030"/>
+              </svg>
+            </button>
+            <div class="footer__soc1als-info">
+              <span class="footer__soc1als-text">Телефон</span>
+              <a href="tel:79632702379" class="footer__soc1als-link">+7 (963) 270 23 79</a>
+            </div>
+          </div>
+          <div class="footer__soc1als">
+            <button
+              class="footer__button button"
+              type="button"
+            >
+              <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.7397 1.90975L15.3744 7.72978L21.7397 13.5498C21.8547 13.3285 21.9245 13.0838 21.9245 12.8225V2.63703C21.9245 2.37572 21.8547 2.13108 21.7397 1.90975Z" fill="#313030"/>
+                <path d="M20.0799 0.939453H2.78095C2.49699 0.939453 2.23116 1.0037 1.99065 1.10959L10.1262 8.55869C10.8455 9.22067 12.0153 9.22067 12.7346 8.55869L20.8702 1.10959C20.6297 1.0037 20.3638 0.939453 20.0799 0.939453Z" fill="#313030"/>
+                <path d="M1.12116 1.90975C1.00609 2.13108 0.936279 2.37572 0.936279 2.63703V12.8225C0.936279 13.0838 1.00609 13.3285 1.12116 13.5498L7.48646 7.72978L1.12116 1.90975Z" fill="#313030"/>
+                <path d="M14.5049 8.52994L13.6041 9.35885C12.4055 10.4619 10.4552 10.4619 9.25665 9.35885L8.35596 8.52994L1.99065 14.35C2.23116 14.4559 2.49699 14.5201 2.78095 14.5201H20.0799C20.3638 14.5201 20.6297 14.4559 20.8702 14.35L14.5049 8.52994Z" fill="#313030"/>
+              </svg>
+
+            </button>
+            <div class="footer__soc1als-info">
+              <span class="footer__soc1als-text">E-mail</span>
+              <a href="mailto:rgkrezh@mail.ru" class="footer__soc1als-link footer__soc1als-link--mail">rgkrezh@mail.ru</a>
+            </div>
+          </div>
+          <div class="header__soc1als">
+            <button class="button header__button" type="button">
+              Заказать звонок
+            </button>
+            <button class="button--soc1als header__soc1als-button" type="button">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.453885 11.6295L2.72475 11.034L2.94385 11.164C3.86506 11.7104 4.92103 11.9996 5.99768 12H6.00011C9.30711 12 11.9987 9.30934 12 6.00217C12.0006 4.39953 11.3771 2.89264 10.2443 1.75892C9.11153 0.625212 7.60506 0.000555445 6.00247 0C2.69291 0 0.00131371 2.69039 5.10174e-07 5.99731C-0.000464343 7.13062 0.316748 8.23432 0.917355 9.18925L1.06001 9.41618L0.453885 11.6295ZM9.38985 7.55638C9.51565 7.61716 9.6006 7.6582 9.63688 7.71873C9.68196 7.79391 9.68196 8.15492 9.53173 8.57617C9.38136 8.99734 8.66077 9.38174 8.31419 9.43349C8.00345 9.47993 7.6102 9.4993 7.17813 9.36203C6.91614 9.27895 6.58019 9.16801 6.14985 8.98222C4.45889 8.25233 3.31615 6.61403 3.10017 6.30438C3.08504 6.28269 3.07446 6.26752 3.06856 6.25964L3.0671 6.2577C2.97164 6.13038 2.33205 5.27731 2.33205 4.39442C2.33205 3.56387 2.74017 3.12854 2.92803 2.92816C2.9409 2.91443 2.95274 2.90181 2.96334 2.89023C3.12867 2.70971 3.32409 2.66459 3.44433 2.66459C3.56457 2.66459 3.68494 2.6657 3.79004 2.67097C3.803 2.67162 3.81649 2.67154 3.83044 2.67146C3.93555 2.67085 4.06659 2.67008 4.19587 2.98049C4.2456 3.09995 4.31837 3.27704 4.39512 3.46383C4.55033 3.84156 4.72182 4.2589 4.75199 4.3193C4.79709 4.40955 4.82714 4.51481 4.76702 4.6352C4.758 4.65325 4.74965 4.67029 4.74167 4.68656C4.69652 4.77872 4.6633 4.84651 4.58666 4.93597C4.55652 4.97114 4.52537 5.00906 4.49422 5.04698C4.43217 5.12253 4.37012 5.19806 4.31609 5.25187C4.22579 5.34178 4.13179 5.43933 4.23701 5.61985C4.34223 5.80036 4.70422 6.39079 5.24044 6.86892C5.81685 7.38286 6.31782 7.60009 6.57175 7.71019C6.62134 7.73169 6.6615 7.74911 6.69097 7.76385C6.87128 7.85414 6.9765 7.83903 7.08172 7.71873C7.18695 7.5984 7.53262 7.19221 7.65285 7.01173C7.77307 6.83128 7.89337 6.86134 8.05867 6.92149C8.22404 6.98172 9.11083 7.41787 9.29121 7.50811C9.32642 7.52574 9.35933 7.54164 9.38985 7.55638Z" fill="#151515"></path>
+              </svg>
+            </button>
+            <button class="button--soc1als header__soc1als-button" type="button">
+              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6235 0.69395C15.7421 0.30251 15.6235 0.0178071 15.0982 0.0178071H13.3528C12.9123 0.0178071 12.7089 0.266896 12.5903 0.533844C12.5903 0.533844 11.6922 2.81141 10.4382 4.28824C10.0315 4.7153 9.84515 4.85765 9.6249 4.85765C9.50624 4.85765 9.35377 4.7153 9.35377 4.32386V0.676143C9.35377 0.213527 9.21821 0 8.84538 0H6.10028C5.82915 0 5.65972 0.213527 5.65972 0.427054C5.65972 0.871915 6.28667 0.978653 6.35445 2.2242V4.92882C6.35445 5.51604 6.2528 5.62277 6.0325 5.62277C5.43942 5.62277 3.99909 3.3274 3.13488 0.711757C2.9654 0.19572 2.79597 0 2.35541 0H0.593076C0.0847302 0 0 0.249141 0 0.516037C0 0.99646 0.593076 3.41638 2.76205 6.61923C4.20243 8.80782 6.2528 9.98219 8.09983 9.98219C9.21821 9.98219 9.35377 9.7153 9.35377 9.27049V7.61569C9.35377 7.08185 9.45542 6.99292 9.81129 6.99292C10.0655 6.99292 10.523 7.13522 11.5566 8.18505C12.7428 9.4306 12.9461 10 13.607 10H15.3524C15.8607 10 16.098 9.7331 15.9624 9.21707C15.8099 8.70108 15.2338 7.95377 14.4881 7.06404C14.0815 6.56587 13.4714 6.01427 13.285 5.74732C13.0309 5.39149 13.0986 5.24914 13.285 4.92882C13.2681 4.92882 15.4032 1.76159 15.6235 0.69395Z" fill="#151515"></path>
+              </svg>
+            </button>
+            <button class="button--soc1als header__soc1als-button" type="button">
+              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99973 4.29845C8.10709 4.29845 13.4913 1.5 13.4913 1.5L13.5 1C13.5 0.448 13.0153 0 12.4164 0H1.58302C0.984707 0 0.5 0.448 0.5 1V1.4455C0.5 1.4455 5.94322 4.29845 6.99973 4.29845Z" fill="#151515"></path>
+                <path d="M6.99973 5.67345C5.94322 5.67345 0.508655 3 0.508655 3L0.5 9C0.5 9.552 0.985248 10 1.58302 10H12.4164C13.0153 10 13.5 9.552 13.5 9L13.4913 3C13.4913 3 8.15794 5.67345 6.99973 5.67345Z" fill="#151515"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__overlay header__overlay">
+        <ul class="footer__overlay-grid header__overlay-grid">
+            <li class="header__overlay-rubric">
+              <div class="header__overlay-rubric-heading">
+                <h2 class="header__overlay-rubric-title">Фотоуслуги</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+              <a class="header__overlay-rubric-link" href="/"> Фотопечать </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Фото на документы
+              </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Реставрация фото
+              </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Выездная фотостудия
+              </a>
+            </li>
+            <li class="header__overlay-rubric">
+              <div class="header__overlay-rubric-heading">
+                <h2 class="header__overlay-rubric-title">Визитки</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+              <a class="header__overlay-rubric-link" href="/">
+                Стандартные визитки 90х50
+              </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Евровизитки 85х55 мм
+              </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Календарик (100 х70 мм)
+              </a>
+            </li>
+            <li class="header__overlay-rubric">
+              <div class="header__overlay-rubric-heading">
+                <h2 class="header__overlay-rubric-title">Листовки</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+              <a class="header__overlay-rubric-link" href="/">
+                Листовки на бумаге
+              </a>
+              <a class="header__overlay-rubric-link" href="/">
+                Листовки на картоне
+              </a>
+              <div class="header__overlay-rubric-heading">
+                <h2 class="header__overlay-rubric-title">Буклеты</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+              <div
+                class="header__overlay-rubric-heading header__overlay-rubric-heading--alt"
+              >
+                <h2 class="header__overlay-rubric-title">Афиши</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+            </li>
+            <li class="header__overlay-rubric">
+              <div class="header__overlay-rubric-heading">
+                <h2 class="header__overlay-rubric-title">Фотоподарки</h2>
+                <div class="header__overlay-rubric-line"></div>
+              </div>
+              <div class="header__overlay-rubric-cols">
+                <div class="header__overlay-rubric-first-col">
+                  <a class="header__overlay-rubric-link" href="/">
+                    Печать на кружках
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/">
+                    Печать на футболках
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/">
+                    Печать на подушках
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/">
+                    Изготовление магнитов
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/"> Фотоплед </a>
+                </div>
+                <div class="header__overlay-rubric-second-col">
+                  <a class="header__overlay-rubric-link" href="/">
+                    Пазл на заказ
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/">
+                    Брелок гос номер
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/">
+                    Изготовление <br />
+                    календарей
+                  </a>
+                  <a class="header__overlay-rubric-link" href="/"> Прочее </a>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </footer>
+
+    <footer class="footer-mobile">
+      <div class="footer-overlay-mobile visible-mobile">
+        <div class="footer-overlay-mobile__head">
+          <a href="/" aria-label="Главная" title="Главная"
+          ><img
+            src="./icons/logo.svg"
+            alt="Логотип Cheese Photo"
+            class="footer-overlay-mobile__logo"
+            width="189"
+            height="48"
+          /></a>
+        </div>
+        <div class="footer-overlay-mobile__main">
+          <div class="soc1als">
+            <ul class="soc1als__list">
+              <li class="soc1als__item">
+                <div class="soc1als__links">
+                  <b class="soc1als__links-name">Телефон</b>
+                  <a href="tel:79632702379" class="soc1als__links-link"
+                  >+7 (963) 270 23 79</a
+                  >
+                </div>
+              </li>
+              <li class="soc1als__item">
+                <div class="soc1als__links">
+                  <b class="soc1als__links-name">E-mail</b>
+                  <a
+                    href="mailto:rgkrezh@mail.ru"
+                    class="soc1als__links-link soc1als__links-link--underlined"
+                  >rgkrezh@mail.ru</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header__soc1als">
+            <button class="button header__button" type="button">
+              Обратный звонок
+            </button>
+            <button
+              class="button--soc1als header__soc1als-button"
+              type="button"
+            >
+              <svg
+                class="whatsup"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.453885 11.6295L2.72475 11.034L2.94385 11.164C3.86506 11.7104 4.92103 11.9996 5.99768 12H6.00011C9.30711 12 11.9987 9.30934 12 6.00217C12.0006 4.39953 11.3771 2.89264 10.2443 1.75892C9.11153 0.625212 7.60506 0.000555445 6.00247 0C2.69291 0 0.00131371 2.69039 5.10174e-07 5.99731C-0.000464343 7.13062 0.316748 8.23432 0.917355 9.18925L1.06001 9.41618L0.453885 11.6295ZM9.38985 7.55638C9.51565 7.61716 9.6006 7.6582 9.63688 7.71873C9.68196 7.79391 9.68196 8.15492 9.53173 8.57617C9.38136 8.99734 8.66077 9.38174 8.31419 9.43349C8.00345 9.47993 7.6102 9.4993 7.17813 9.36203C6.91614 9.27895 6.58019 9.16801 6.14985 8.98222C4.45889 8.25233 3.31615 6.61403 3.10017 6.30438C3.08504 6.28269 3.07446 6.26752 3.06856 6.25964L3.0671 6.2577C2.97164 6.13038 2.33205 5.27731 2.33205 4.39442C2.33205 3.56387 2.74017 3.12854 2.92803 2.92816C2.9409 2.91443 2.95274 2.90181 2.96334 2.89023C3.12867 2.70971 3.32409 2.66459 3.44433 2.66459C3.56457 2.66459 3.68494 2.6657 3.79004 2.67097C3.803 2.67162 3.81649 2.67154 3.83044 2.67146C3.93555 2.67085 4.06659 2.67008 4.19587 2.98049C4.2456 3.09995 4.31837 3.27704 4.39512 3.46383C4.55033 3.84156 4.72182 4.2589 4.75199 4.3193C4.79709 4.40955 4.82714 4.51481 4.76702 4.6352C4.758 4.65325 4.74965 4.67029 4.74167 4.68656C4.69652 4.77872 4.6633 4.84651 4.58666 4.93597C4.55652 4.97114 4.52537 5.00906 4.49422 5.04698C4.43217 5.12253 4.37012 5.19806 4.31609 5.25187C4.22579 5.34178 4.13179 5.43933 4.23701 5.61985C4.34223 5.80036 4.70422 6.39079 5.24044 6.86892C5.81685 7.38286 6.31782 7.60009 6.57175 7.71019C6.62134 7.73169 6.6615 7.74911 6.69097 7.76385C6.87128 7.85414 6.9765 7.83903 7.08172 7.71873C7.18695 7.5984 7.53262 7.19221 7.65285 7.01173C7.77307 6.83128 7.89337 6.86134 8.05867 6.92149C8.22404 6.98172 9.11083 7.41787 9.29121 7.50811C9.32642 7.52574 9.35933 7.54164 9.38985 7.55638Z"
+                  fill="#151515"
+                />
+              </svg>
+            </button>
+            <button
+              class="button--soc1als header__soc1als-button"
+              type="button"
+            >
+              <svg
+                width="17"
+                height="14"
+                viewBox="0 0 17 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.86151 9.23787L6.62464 12.7637C6.97268 12.7637 7.12646 12.6056 7.32072 12.4179L8.99289 10.8024L12.4717 13.3561C13.112 13.707 13.574 13.5253 13.7335 12.7655L16.0172 2.07309C16.251 1.14172 15.6599 0.719298 15.0474 0.995567L1.63739 6.13308C0.722034 6.49786 0.727371 7.00525 1.47054 7.23133L4.91186 8.2985L12.8789 3.30461C13.255 3.078 13.6002 3.19983 13.3168 3.44966L6.86131 9.23773L6.86151 9.23787Z"
+                  fill="#1A1A18"
+                />
+              </svg>
+            </button>
+            <button
+              class="button--soc1als header__soc1als-button"
+              type="button"
+            >
+              <svg
+                width="16"
+                height="10"
+                viewBox="0 0 16 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.6235 0.69395C15.7421 0.30251 15.6235 0.0178071 15.0982 0.0178071H13.3528C12.9123 0.0178071 12.7089 0.266896 12.5903 0.533844C12.5903 0.533844 11.6922 2.81141 10.4382 4.28824C10.0315 4.7153 9.84515 4.85765 9.6249 4.85765C9.50624 4.85765 9.35377 4.7153 9.35377 4.32386V0.676143C9.35377 0.213527 9.21821 0 8.84538 0H6.10028C5.82915 0 5.65972 0.213527 5.65972 0.427054C5.65972 0.871915 6.28667 0.978653 6.35445 2.2242V4.92882C6.35445 5.51604 6.2528 5.62277 6.0325 5.62277C5.43942 5.62277 3.99909 3.3274 3.13488 0.711757C2.9654 0.19572 2.79597 0 2.35541 0H0.593076C0.0847302 0 0 0.249141 0 0.516037C0 0.99646 0.593076 3.41638 2.76205 6.61923C4.20243 8.80782 6.2528 9.98219 8.09983 9.98219C9.21821 9.98219 9.35377 9.7153 9.35377 9.27049V7.61569C9.35377 7.08185 9.45542 6.99292 9.81129 6.99292C10.0655 6.99292 10.523 7.13522 11.5566 8.18505C12.7428 9.4306 12.9461 10 13.607 10H15.3524C15.8607 10 16.098 9.7331 15.9624 9.21707C15.8099 8.70108 15.2338 7.95377 14.4881 7.06404C14.0815 6.56587 13.4714 6.01427 13.285 5.74732C13.0309 5.39149 13.0986 5.24914 13.285 4.92882C13.2681 4.92882 15.4032 1.76159 15.6235 0.69395Z"
+                  fill="#151515"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion">
+            <ul class="accordion__list">
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <header class="accordion__header">
+                      <h2 class="accordion__header-title">Фотоуслуги</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </header>
+                  </summary>
+                  <div class="accordion__rubric-body">
+                    <ul class="aaccordion__rubric-list">
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Фотопечать</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Фото на документы</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Реставрация фото</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Выездная фотостудия</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <div class="accordion__header">
+                      <h2 class="accordion__header-title">Визитки</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </summary>
+                  <div class="accordion__rubric-body">
+                    <ul class="aaccordion__rubric-list">
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Стандартные визитки 90х50</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Евровизитки 85х55 мм</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Календарик (100 х70 мм)</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <div class="accordion__header">
+                      <h2 class="accordion__header-title">Листовки</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </summary>
+                  <div class="accordion__rubric-body">
+                    <ul class="aaccordion__rubric-list">
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Листовки на бумаге</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Листовки на картоне</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <div class="accordion__header">
+                      <h2 class="accordion__header-title">Буклеты</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </summary>
+                </details>
+              </li>
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <div class="accordion__header">
+                      <h2 class="accordion__header-title">Афиши</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </summary>
+                </details>
+              </li>
+              <li class="accordion__item">
+                <details class="accordion__rubric">
+                  <summary class="accordion__rubric-header">
+                    <div class="accordion__header">
+                      <h2 class="accordion__header-title">Фотоподарки</h2>
+                      <div class="accordion__header-line"></div>
+                      <img
+                        class="accordion__header-arrow"
+                        src="./icons/arrow-right.svg"
+                        alt=""
+                        width="5"
+                        height="10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </summary>
+                  <div class="accordion__rubric-body">
+                    <ul class="aaccordion__rubric-list">
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Печать на кружках</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Печать на футболках</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Печать на подушках</a
+                        >
+                      </li>
+
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Изготовление магнитов</a
+                        >
+                      </li>
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link">Фотоплед</a>
+                      </li>
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Пазл на заказ</a
+                        >
+                      </li>
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Брелок гос номер</a
+                        >
+                      </li>
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link"
+                        >Изготовление календарей</a
+                        >
+                      </li>
+                      <li class="accordion__rubric-item">
+                        <a href="/" class="accordion__rubric-link">Прочее</a>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-overlay-mobile__footer">
+            <p class="footer-overlay-mobile__time">
+              <time datetime="2014">2014</time> -
+              <time datetime="2024">2024</time> Все права защищены
+            </p>
+            <p class="footer-overlay-mobile__policy">
+              <a href="/"><u> Политика обработки персональных данных </u></a>
+            </p>
+            <p class="footer-overlay-mobile__designed">
+              Designed by <b><u>Vlad Rusak</u></b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3, // Значение по умолчанию для больших экранов
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".slider__button-next",
+          prevEl: ".slider__button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // Настройки для экранов до 767px
+          0: {
+            slidesPerView: 2, // Показывать 2 слайда
+            spaceBetween: 8,
+          },
+          // Настройки для экранов от 768px и выше (сохраняют дефолтные значения)
+          768: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

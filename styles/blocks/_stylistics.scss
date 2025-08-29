@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+.stylistics {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(45);
+  padding-top: rem(70);
+
+  @include mobile {
+    row-gap: rem(35);
+  }
+
+  &__title {
+    font-size: rem(42);
+    font-weight: 600;
+
+    @include mobile {
+      font-size: rem(28);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(20);
+
+    @include laptop {
+      flex-direction:  column;
+    }
+  }
+}

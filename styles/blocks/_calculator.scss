@@ -1,0 +1,246 @@
+@use "../helpers" as *;
+
+.calculator {
+  border: none;
+
+  &-page {
+
+    margin-top: rem(150);
+    max-width: 60vw;
+
+    @include laptop-above {
+      max-width: rem(1152);
+    }
+
+    @include tablet {
+      max-width: 70vw;
+    }
+
+    @include mobile {
+      max-width: 80vw;
+    }
+
+
+  }
+
+  &__button {
+    margin-top: rem(50);
+    @include abs-x;
+  }
+
+  &:modal {
+    max-width: 100%;
+    max-height: 100%;
+    width: 60vw;
+
+    @include laptop-above {
+      max-width: rem(1152);
+    }
+
+    @include tablet {
+      width: 70vw;
+    }
+
+    @include mobile {
+      width: 80vw;
+    }
+  }
+
+  &__body {
+    padding: rem(20);
+    flex-direction: column;
+    row-gap: rem(4);
+
+    @include mobile {
+      padding: rem(4);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-block: rem(25);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: fluid(30, 18);
+    line-height: 1;
+    padding-bottom: rem(4);
+  }
+
+  &__description {
+    font-size: fluid(24, 16);
+    line-height: 1;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include laptop {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+  }
+
+  &__others {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__upload-button {
+    padding-bottom: rem(25);
+  }
+
+  &__place,
+  &__inputs{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    gap: rem(24);
+    align-items: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__place {
+    &--on-page {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap:  rem(24);
+  }
+
+  &__cup-image {
+    max-width: rem(400);
+    object-fit: contain;
+    width: 50vw;
+  }
+
+  &__checkbox {
+    &-label {
+      display: flex;
+      align-items: center;
+      column-gap: rem(4);
+    }
+
+    &-input {
+      @include square(rem(18));
+
+    }
+  }
+
+  &__submit-button {
+    min-height: rem(45);
+  }
+
+  &__upload-container {
+    margin-top: rem(24);
+    position: relative;
+    width: rem(250);
+    height: rem(40);
+
+    @include mobile {
+      width: 50vw;
+    }
+  }
+
+  &__upload-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__upload-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-yellow); /* Желтый цвет */
+    color: var(--color-dark-alt);
+    line-height: 1;
+    padding-left: rem(4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+
+  &__final-price {
+    margin-top: rem(30);
+    height: rem(150);
+    background-color: var(--color-yellow);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      padding-inline: rem(4);
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    color:  var(--color-dark-alt);
+    font-size: rem(30);
+    text-align: center;
+
+    @include mobile {
+      font-size: rem(24);
+    }
+  }
+}
+
+.option-group {
+  width:  100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  margin-top: rem(10);
+  padding: rem(15);
+  background: #FAFAFA;
+    border-radius: rem(4);
+  border-left: rem(10) solid var(--color-yellow);
+}
+
+.option-group__title {
+  font-weight: 700;
+  color: var(--color-dark-alt);
+  margin-bottom: rem(5);
+}
+
+.file-name {
+  text-align: center;
+  font-size: rem(18);
+  color: var(--color-dark-alt);
+  margin-block: rem(24);
+  padding: rem(8);
+  border: rem(2) solid var(--color-yellow);
+}

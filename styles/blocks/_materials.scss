@@ -1,0 +1,93 @@
+@use "../helpers" as *;
+
+.materials {
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr);
+  column-gap: rem(75);
+  align-items: center;
+  padding-top: rem(200);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    font-size: rem(42);
+    font-weight: 800;
+    color: var(--color-dark);
+    position: relative;
+    text-wrap: nowrap;
+
+    &:last-child {
+      @include tablet {
+        padding-bottom: rem(18);
+      }
+    }
+
+
+
+    @include mobile {
+      font-size: rem(28);
+      text-wrap: wrap;
+    }
+
+    &--yellow {
+      color: var(--color-yellow-alt)
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(75);
+    width: 30vw;
+
+    @include tablet {
+      display: contents;
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(40) rem(25);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      order: 3;
+      padding-top: rem(30);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      max-width: rem(342);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+  }
+
+  &__info {
+    font-size: rem(22);
+    line-height: rem(28);
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    min-width: rem(500);
+
+    @include mobile {
+      min-width: rem(338);
+    }
+  }
+
+}

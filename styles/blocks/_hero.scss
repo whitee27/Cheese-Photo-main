@@ -1,0 +1,111 @@
+@use "../helpers" as *;
+
+.hero {
+  padding-top: rem(110);
+
+  &__wrapper {
+    background: url("../../images/hero/hero_bg-main.jpg") center/cover no-repeat;
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 2;
+
+    @include mobile {
+      background: none;
+    }
+
+    &-mobile {
+      width:  100vw;
+
+      left: 52%;
+
+    }
+  }
+
+  &__content {
+    width: 30vw;
+
+    @include tablet {
+      width: 50vw;
+    }
+
+    @include mobile {
+      width: 90vw;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(35);
+  }
+
+  &__title {
+    color: var(--color-dark);
+    max-width: rem(531);
+    padding-bottom: rem(32);
+    font-weight: 800;
+
+    @include mobile {
+      font-size: rem(30);
+      line-height: 1.20;
+    }
+  }
+
+  &__path {
+    font-size: rem(14);
+    line-height: 1;
+
+    &--gray {
+      color: var(--color-gray-alt);
+    }
+  }
+
+  &__description {
+    font-size: rem(22);
+    font-weight: 500;
+    color: var(--color-dark);
+    padding-bottom: rem(37);
+    max-width: rem(620);
+
+    @include mobile {
+      font-size: rem(16);
+      max-width:  rem(420);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+    padding-bottom: rem(45);
+
+    @include mobile {
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(6);
+  }
+
+  &__text {
+    font-size: rem(18);
+    font-weight: 400;
+    color: #000000;
+  }
+
+  &__button {
+    padding: rem(27.5) rem(56);
+    border-radius: rem(12);
+    font-size: rem(17);
+    font-weight: 600;
+    min-height: rem(67);
+
+    @include mobile {
+      width: rem(342);
+      margin-inline: calc((100% - 342px) / 2);
+    }
+  }
+}

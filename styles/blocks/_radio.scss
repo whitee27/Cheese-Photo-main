@@ -1,0 +1,39 @@
+@use "../helpers" as *;
+
+.radio {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    transition-duration: var(--transition-duration);
+    
+    @include hover {
+        opacity: 0.6;
+    }
+
+    &__input {
+        &:not(:checked) + .radio__emulator::after {
+            opacity: 0;
+        }
+    }
+
+    &__emulator {
+        @include flex-center;
+        @include square(18px);
+
+        position: relative;
+        background-color: var(--color-light);
+        border: rem(1) solid var(--color-dark-alt);
+        border-radius: 50%;
+    
+
+        &::after {
+            @include abs-center;
+            @include square(50%);
+
+            content: '';
+            background-color: var(--color-accent);
+            border-radius: inherit;
+            transition-duration: var(--transition-duration);
+        }
+    }
+}

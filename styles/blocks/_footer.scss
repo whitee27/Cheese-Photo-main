@@ -1,0 +1,143 @@
+@use "../helpers" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(38);
+  min-height: rem(450);
+  gap: rem(45) rem(90);
+  width: 100%;
+
+
+  &__main {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    gap: 2rem 1rem;
+
+    @include laptop {
+      flex-direction:  column;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(66);
+
+    @include tablet {
+      column-gap: rem(20);
+    }
+  }
+
+  &__soc1als {
+    display: flex;
+    column-gap: rem(9);
+    align-items: center;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(4);
+      justify-content: center;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: rem(16);
+      color: #313030;
+      line-height: 1;
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: 119%;
+      color: rgba(47, 40, 37, 0.45);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: rem(6);
+      text-wrap: nowrap;
+      &--mail {
+        text-decoration:  underline !important;
+      }
+
+      @include hover {
+        color: #313030;
+      }
+    }
+  }
+
+  &__button {
+    max-height:  rem(44) !important;
+    max-width: rem(44) !important;
+    min-height: rem(44) !important;
+    min-width: rem(44) !important;
+    border-radius: rem(5);
+    padding: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 rem(15) 0 rgba(0, 0, 0, 0.09);
+    border: none;
+  }
+
+
+  &__overlay {
+    padding: 0;
+    margin-top: 0;
+    border-radius: 0;
+    background-color: transparent;
+    position: static;
+    z-index: 1;
+    width: 60vw;
+    box-shadow: none;
+    min-height: 0;
+
+    &-grid {
+      width: 80vw;
+
+      @include laptop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(30);
+        width: 80vw;
+      }
+    }
+
+    &-rubric {
+      &-heading--alt {
+        padding-top: rem(33);
+      }
+
+      &-link {
+        color: rgba(21, 21, 21, 0.45);
+      }
+    }
+  }
+
+  &-overlay-mobile {
+
+    &__head {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__footer {
+      padding-block: 0.9375rem;
+      background-color: rgba(38, 38, 38, 0.03);
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5625rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__time,
+    &__designed,
+    &__policy {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: #868686;
+    }
+  }
+}

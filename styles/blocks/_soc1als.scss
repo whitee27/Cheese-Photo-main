@@ -1,0 +1,49 @@
+@use "../helpers" as *;
+
+.soc1als {
+  padding-top: rem(45);
+  padding-bottom: rem(25);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-right: 1px solid #d9d9d9;
+      padding-right: rem(30);
+      display: inline-flex;
+      justify-content: end;
+    }
+
+    &:last-child {
+      padding-left: rem(30);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(15);
+
+    &-name,
+    &-link {
+      font-size: rem(16);
+      line-height: 0.8;
+      text-wrap: nowrap;
+    }
+
+    &-link {
+      color: var(--color-dark);
+      opacity: 0.6;
+
+      &--underlined {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
