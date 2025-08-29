@@ -2113,7 +2113,7 @@ details > summary {
 .table__man-image {
   position: relative;
   float: right;
-  bottom: 20.3125rem;
+  bottom: 15.625rem;
   padding-left: 3.125rem;
   pointer-events: none;
 }
@@ -2550,7 +2550,7 @@ details > summary {
   }
 }
 .stylistics__banner {
-  background: url("../../images/stylistics/bg.jpg") center/cover no-repeat;
+  background: url("../images/stylistics/bg.jpg") center/cover no-repeat;
   min-width: 100%;
   min-height: 100%;
   padding: 2.8125rem;
