@@ -3,6 +3,12 @@
 .hero {
   padding-top: rem(110);
 
+  &--alt {
+    @include mobile {
+      padding-bottom: rem(100);
+    }
+  }
+
   &__wrapper {
     background: url("../images/hero/hero_bg-main.jpg") center/cover no-repeat;
     width: 100vw;
@@ -15,9 +21,11 @@
 
     &-mobile {
       width:  100vw;
-
       left: 52%;
+    }
 
+    &--main {
+      background: url("../images/hero/hero_bg-main_2.jpg") center/cover no-repeat;
     }
   }
 
@@ -48,6 +56,10 @@
     @include mobile {
       font-size: rem(30);
       line-height: 1.20;
+    }
+
+    &--main {
+      max-width: 100%;
     }
   }
 
@@ -80,7 +92,7 @@
     padding-bottom: rem(45);
 
     @include mobile {
-      padding-bottom: 0;
+      padding-bottom: rem(20);
     }
   }
 
@@ -88,12 +100,48 @@
     display: inline-flex;
     align-items: center;
     column-gap: rem(6);
+
+    &-main {
+      column-gap:  rem(9);
+    }
+
+    &-image {
+      border-radius: rem(8);
+      box-shadow: 0 rem(2) rem(21) 0 rgba(0, 0, 0, 0.07);
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(5);
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 107%;
+      color: #212529;
+    }
   }
 
   &__text {
     font-size: rem(18);
     font-weight: 400;
     color: #000000;
+
+    &--main {
+      font-size: 16px;
+      line-height: 117%;
+
+      @include mobile {
+        max-width: 60vw;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: rem(5);
   }
 
   &__button {
@@ -106,6 +154,15 @@
     @include mobile {
       width: rem(342);
       margin-inline: calc((100% - 342px) / 2);
+    }
+
+    &--transparent {
+      opacity: 0.6;
+      border: none;
+
+      @include hover {
+        opacity: 1;
+      }
     }
   }
 }

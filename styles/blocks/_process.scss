@@ -6,13 +6,17 @@
   flex-direction: column;
   row-gap: rem(45);
 
+  &--main {
+    padding-top: rem(10);
+  }
+
   @include mobile {
     row-gap: rem(35);
   }
 
   &__title {
     font-size: rem(42);
-    font-weight: 600;
+    font-weight: 800;
 
     @include mobile {
       font-size: rem(28);

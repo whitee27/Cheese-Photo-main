@@ -28,6 +28,16 @@
       font-size: rem(42);
       color: var(--color-dark);
 
+      &--small {
+        font-weight: 600;
+        font-size: rem(30);
+
+        @include mobile {
+
+          font-size: rem(24);
+        }
+      }
+
       @include mobile {
         font-size: rem(28);
       }
@@ -59,7 +69,22 @@
     & table {
       width: 100%;
       border-radius: rem(12);
-      box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.03);
+      box-shadow: 0 rem(2) rem(28) 0 rgba(0, 0, 0, 0.03);
+
+      & tr {
+        &:not(:last-child) {
+          border-bottom: rem(1) solid rgba(0, 0, 0, 0.07);
+        }
+      }
+    }
+  }
+
+  &__list-tables {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(160);
+    @include mobile {
+      row-gap: rem(40);
     }
   }
 
@@ -74,7 +99,7 @@
         font-weight: 600;
         padding: 1rem rem(21);
         background-color: var(--color-yellow);
-        border-bottom: 1px solid #e7e7ed;
+        border-bottom: rem(1) solid #e7e7ed;
         text-wrap: nowrap;
         &:not(:last-child) {
           border-right: 1px solid rgba(0, 0, 0, 0.07);
@@ -118,8 +143,29 @@
         }
 
         &:first-child {
-          padding: rem(29) 0 rem(29) rem(16);
+          padding: rem(29) rem(10) rem(29) rem(16);
+          max-width: rem(240);
         }
+      }
+    }
+
+    &-gray {
+      & * {
+        height: rem(55);
+        background: #f6f6f6;
+        font-weight: 500;
+        font-size: rem(16);
+        opacity: 0.6;
+        text-align: center;
+        border-bottom: rem(1) solid rgba(0, 0, 0, 0.07);
+        &:not(:last-child) {
+          border-right: rem(1) solid rgba(0, 0, 0, 0.07);
+        }
+      }
+
+      & td {
+        max-width: rem(122);
+        min-width: rem(122);
       }
     }
   }
@@ -134,6 +180,14 @@
     &--bold {
       font-weight: 600;
       opacity: 1;
+    }
+
+    &--alt {
+      padding-bottom: rem(160);
+
+      @include mobile {
+        padding-bottom: rem(40);
+      }
     }
   }
 
@@ -269,4 +323,21 @@
   font-size: rem(14);
   font-weight: 600;
   padding: 0 !important;
+}
+
+.td-gray {
+  font-weight: 500;
+  color: rgba(47, 40, 37, 0.6);
+}
+
+.highlight-cell {
+  background-color: #FFECBF !important;
+}
+
+.highlight-cell-opacity {
+  background-color: rgba(255, 236, 191, 0.29) !important;
+}
+
+.highlight-header {
+  background-color: #FFC846 !important;
 }

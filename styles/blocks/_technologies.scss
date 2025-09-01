@@ -1,0 +1,140 @@
+@use "../helpers" as *;
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(50);
+  padding-bottom: rem(200);
+
+  &__title {
+    font-weight: 800;
+    font-size: rem(42);
+    color: var(--color-dark);
+
+    @include mobile {
+      font-size: rem(28);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    gap: rem(20);
+    @include laptop {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+    border-radius: rem(15);
+    min-height: rem(850);
+    width: rem(630);
+    padding: rem(45);
+    &--first {
+      background: url("../images/technologies/card-bg-1.png") center/cover no-repeat;
+    }
+
+    &--second {
+      background: url("../images/technologies/card-bg-2.png") center/cover no-repeat;
+    }
+
+    @include mobile {
+      width: 90vw;
+      min-height: rem(1100);
+    }
+
+    @include mobile-s {
+      min-height: rem(1200);
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(20);
+
+      &-title {
+        font-weight: 700;
+        font-size: rem(28);
+        line-height: 1;
+
+        @include mobile {
+          font-size: rem(20);
+        }
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 133%;
+        color: #353535;
+
+        @include mobile {
+          font-size: rem(16);
+        }
+      }
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(30);
+    }
+
+    &-pros,
+    &-cons {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(10);
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: rem(18);
+      color: #353535;
+
+      @include mobile {
+        font-size: rem(16);
+      }
+    }
+
+    &-info {
+      display: inline-flex;
+      align-items: center;
+      column-gap: rem(5);
+      font-weight: 500;
+      font-size: rem(16);
+      color: #353535;
+      @include mobile {
+        text-wrap: balance;
+      }
+      & svg {
+        color:  var(--color-light);
+      }
+    }
+
+    &-button {
+      border-radius: rem(12);
+      min-height: 67px;
+      width: 100%;
+      font-weight: 600;
+      font-size: rem(17);
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #35160b;
+
+      &--yellow {
+        background-color: var(--color-yellow);
+        border: none;
+      }
+
+      @include mobile {
+        text-wrap: wrap;
+      }
+    }
+  }
+}

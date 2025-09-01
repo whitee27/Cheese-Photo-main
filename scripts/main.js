@@ -307,8 +307,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Получаем все ячейки таблицы, кроме заголовков
-  const sizeCells = document.querySelectorAll('.table__first');
-  const priceCells = document.querySelectorAll('.table__second');
+  const sizeCells = document.querySelectorAll('[data-js-table-first]');
+  const priceCells = document.querySelectorAll('[data-js-table-second]');
 
   // Получаем все картинки
   const images = document.querySelectorAll('.table__item-image');
@@ -473,3 +473,161 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//видео плеер
+
+document.addEventListener('DOMContentLoaded', function() {
+  const playButtons = document.querySelectorAll('[data-js-video-player-play-button]');
+
+  playButtons.forEach(button => {
+    const videoContainer = button.closest('[data-js-video-player]');
+    const video = videoContainer.querySelector('video');
+
+    // Функция для показа кнопки
+    function showPlayButton() {
+      button.style.display = 'block';
+    }
+
+    // Функция для скрытия кнопки
+    function hidePlayButton() {
+      button.style.display = 'none';
+    }
+
+    // Обработчик клика на кнопку
+    button.addEventListener('click', function() {
+      video.controls = true;
+      video.play();
+      hidePlayButton();
+    });
+
+    // Обработчики событий видео
+    video.addEventListener('pause', showPlayButton);
+    video.addEventListener('ended', showPlayButton);
+    video.addEventListener('play', hidePlayButton);
+
+    // Дополнительно: скрыть кнопку при использовании стандартных элементов управления
+    video.addEventListener('click', function() {
+      if (video.paused) {
+        showPlayButton();
+      } else {
+        hidePlayButton();
+      }
+    });
+  });
+});
+
+//подсвечивание ячеек таблицы
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tables = document.querySelectorAll('.table__main table');
+
+  tables.forEach(table => {
+    // Добавляем обработчики событий для всех ячеек
+    const cells = table.querySelectorAll('td');
+    cells.forEach(cell => {
+      cell.addEventListener('mouseover', function(e) {
+        if (isPriceCell(this)) {
+          highlightRelatedCells(table, this);
+        }
+      });
+
+      cell.addEventListener('mouseout', function(e) {
+        if (isPriceCell(this)) {
+          removeAllHighlights(table);
+        }
+      });
+    });
+  });
+});
+
+// Функция для проверки, является ли ячейка "ценовой"
+function isPriceCell(cell) {
+  const text = cell.textContent.trim();
+  return (text.includes('₽') || text.includes('—')) &&
+    !cell.closest('.table__row-first') &&
+    !cell.closest('.table__row-gray');
+}
+
+// Функция для подсветки связанных ячеек
+function highlightRelatedCells(table, hoveredCell) {
+  const row = hoveredCell.parentElement;
+  const rowIndex = row.rowIndex;
+  const cellIndex = hoveredCell.cellIndex;
+
+  // Подсвечиваем саму ячейку
+  hoveredCell.classList.add('highlight-cell');
+
+  // Подсвечиваем всю строку (кроме самой ячейки и ячеек заголовков)
+  Array.from(row.cells).forEach((cell, idx) => {
+    if (cell !== hoveredCell && idx > 0 && !isHeaderCell(cell)) {
+      cell.classList.add('highlight-cell-opacity');
+    }
+  });
+
+  // Подсвечиваем весь столбец (кроме ячеек заголовков)
+  const rows = table.rows;
+  for (let i = 2; i < rows.length; i++) {
+    if (i === rowIndex) continue;
+
+    const cell = rows[i].cells[cellIndex];
+    if (cell && !isHeaderCell(cell)) {
+      cell.classList.add('highlight-cell-opacity');
+    }
+  }
+
+  // Подсвечиваем заголовки столбцов
+  const headerRow = table.rows[1];
+  if (headerRow && cellIndex > 0) {
+    // Корректируем индекс для учета rowspan в первой строке
+    const headerCellIndex = cellIndex - 1;
+
+    if (headerCellIndex < headerRow.cells.length) {
+      const headerCell = headerRow.cells[headerCellIndex];
+      if (headerCell && !isHeaderCell(headerCell)) {
+        headerCell.classList.add('highlight-cell-opacity');
+      }
+    }
+  }
+
+  // Подсвечиваем основной заголовок столбца (первая строка)
+  const firstHeaderRow = table.rows[0];
+  if (firstHeaderRow) {
+    let currentIndex = 0;
+    let targetHeaderCell = null;
+
+    // Находим заголовок, который покрывает текущий столбец
+    for (let i = 0; i < firstHeaderRow.cells.length; i++) {
+      const cell = firstHeaderRow.cells[i];
+      const colspan = cell.colSpan || 1;
+
+      if (cellIndex >= currentIndex && cellIndex < currentIndex + colspan) {
+        targetHeaderCell = cell;
+        break;
+      }
+
+      currentIndex += colspan;
+    }
+
+    if (targetHeaderCell) {
+      targetHeaderCell.classList.add('highlight-header');
+    }
+  }
+
+  // Подсвечиваем только ячейку с названием формата в текущей строке
+  const nameCell = row.cells[0];
+  if (nameCell && rowIndex > 1) {
+    nameCell.classList.add('highlight-cell-opacity');
+  }
+}
+
+// Функция для проверки, является ли ячейка заголовком
+function isHeaderCell(cell) {
+  return cell.closest('.table__row-first') || cell.closest('.table__row-gray');
+}
+
+// Функция для удаления всех подсветок
+function removeAllHighlights(table) {
+  const cells = table.querySelectorAll('td, th');
+  cells.forEach(cell => {
+    cell.classList.remove('highlight-cell', 'highlight-cell-opacity', 'highlight-header');
+  });
+}

@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.video-player {
+  position: relative;
+  max-width: rem(632);
+
+  &__play-button {
+    @include abs-center;
+    @include square(rem(60));
+    display: grid;
+    padding: 0;
+    place-items:  center;
+    background-color: var(--color-light);
+    border: none;
+    border-radius: rem(14);
+  }
+}
